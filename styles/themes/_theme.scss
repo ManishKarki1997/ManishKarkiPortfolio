@@ -1,0 +1,48 @@
+@import "./colors";
+
+$bg-primary: white;
+$bg-secondary: white;
+
+$text-primary: #092c4c;
+$text-secondary: $black-2;
+$text-tertiary: $gray-3;
+$text-accent: #2f80ed;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $text-primary;
+}
+
+p {
+  color: $text-secondary;
+}
+
+body.dark {
+  $text-primary: white;
+  $text-secondary: $gray-4;
+  $text-tertiary: $gray-3;
+  $text-accent: #2f80ed;
+
+  $bg-primary: $black-1;
+  $bg-secondary: $black-2;
+
+  background-color: $bg-primary;
+  color: $text-primary;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $text-primary;
+  }
+
+  p {
+    color: $text-secondary;
+  }
+}
