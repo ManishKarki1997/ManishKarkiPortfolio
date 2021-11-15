@@ -1,0 +1,29 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  @apply light;
+}
+
+.dark {
+  --color-bg-primary: #040407;
+  --color-bg-secondary: #0c172a;
+  --color-bg-accent: #004de4;
+
+  --color-text-primary: #ffffff;
+  /* --color-text-secondary: #e5e7eb; */
+  --color-text-secondary: #c0c2c6;
+  --color-text-accent: #004de4;
+}
+
+.light {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #edf2f7;
+  --color-bg-accent: #004de4;
+
+  /* --color-text-primary: #031b4e; */
+  --color-text-primary: #000;
+  --color-text-secondary: rgba(3, 27, 78, 0.7);
+  --color-text-accent: #004de4;
+}

@@ -1,14 +1,11 @@
 import Head from "next/head";
 
-import Header from "../components/Header";
-
 export default function Home() {
   return (
     <>
       <Head>
         <title>Manish Karki</title>
       </Head>
-      <Header />
       <div className="dark">
         <h1>Heading1</h1>
         <p>
