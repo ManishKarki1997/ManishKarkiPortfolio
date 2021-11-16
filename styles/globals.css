@@ -53,6 +53,8 @@ p {
   width: 3px;
   background-color: var(--color-text-secondary);
   transform: scaleY(0);
+  /* transform: scaleY(1); */
+  /* transform: rotate(3deg); */
 }
 
 .circle .bottom {
@@ -64,4 +66,6 @@ p {
   width: 3px;
   background-color: var(--color-text-secondary);
   transform: scaleY(0);
+  /* transform: scaleY(1); */
+  /* transform: rotate(2deg); */
 }
