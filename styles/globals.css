@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 html {
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 html,
@@ -19,6 +19,49 @@ body {
   /* @apply px-12 mx-auto max-w-7xl md:px-32; */
 }
 
+.bodyContainer {
+  @apply max-w-screen-xl px-12 mx-auto md:px-24;
+}
+
 p {
   color: var(--color-text-secondary);
+}
+
+.circle-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  border: 3px solid var(--color-text-secondary);
+  position: relative;
+  transform: rotate(2deg);
+  /* transform: rotate(15deg); */
+}
+
+.circle .top {
+  position: absolute;
+  content: "";
+  bottom: 100%;
+  left: 50%;
+  height: 50vh;
+  width: 3px;
+  background-color: var(--color-text-secondary);
+  transform: scaleY(0);
+}
+
+.circle .bottom {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 50%;
+  height: 50vh;
+  width: 3px;
+  background-color: var(--color-text-secondary);
+  transform: scaleY(0);
 }

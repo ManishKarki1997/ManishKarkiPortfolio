@@ -2,12 +2,12 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <>
+    <div className="flex">
       <Head>
         <title>Manish Karki</title>
       </Head>
 
-      <div className="container">
+      <div className="bodyContainer">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus neque
           eius doloremque doloribus voluptates vitae veniam commodi dolores.
@@ -3385,6 +3385,6 @@ export default function Home() {
           facilis sit rerum?
         </p>
       </div>
-    </>
+    </div>
   );
 }
