@@ -45,15 +45,24 @@ const Header = () => {
     setNavExpanded(!navExpanded);
 
     if (!navExpanded) {
-      navTimelineRef.current.play();
+      navTimelineRef.current.timeScale(1).play();
     } else {
-      navTimelineRef.current.reverse();
+      navTimelineRef.current.timeScale(1.6).reverse();
     }
   };
+
+  const circleHoverRef = React.useRef(null);
 
   React.useEffect(() => {
     navTimelineRef.current = gsap.timeline({
       paused: true,
+    });
+
+    circleHoverRef.current = gsap.to(".circle", {
+      paused: true,
+      scale: 1.1,
+      duration: 0.5,
+      ease: "power4.easeInOut",
     });
 
     if (!isLettersAnimated) {
@@ -77,21 +86,20 @@ const Header = () => {
     });
 
     navTimelineRef.current.to(".letter-m", {
-      ease: "power4.easeInOut",
+      ease: "power2.easeInOut",
       css: {
         zIndex: 25,
-        // position: "fixed",
+
         transform: "translate(-50%,-50%)",
         top: "50%",
         left: "50%",
-
-        // marginLeft: "-8px",
       },
     });
 
     navTimelineRef.current.to(
       ".circle .bottom",
       {
+        ease: "power4.easeInOut",
         autoAlpha: 1,
         duration: 0.4,
         transform: "scaleY(1)",
@@ -101,6 +109,8 @@ const Header = () => {
     navTimelineRef.current.to(
       ".circle .top",
       {
+        ease: "power4.easeInOut",
+
         autoAlpha: 1,
         duration: 0.4,
         transform: "scaleY(1)",
@@ -157,7 +167,11 @@ const Header = () => {
       <nav className="fixed top-0 right-0 w-full h-screen opacity-0 bg-primary z-25 navigation">
         {/* <nav className="fixed top-0 right-0 w-full h-screen opacity-1 bg-primary z-25 navigation"> */}
         <div className="circle-wrapper">
-          <div className="opacity-1 circle">
+          <div
+            onMouseOver={() => circleHoverRef.current.play()}
+            onMouseLeave={() => circleHoverRef.current.reverse()}
+            className="opacity-1 circle"
+          >
             <span className="top"></span>
             <span className="bottom"></span>
           </div>
