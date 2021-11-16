@@ -7,6 +7,8 @@ module.exports = {
         primary: "var(--color-bg-primary)",
         secondary: "var(--color-bg-secondary)",
         accent: "var(--color-bg-accent)",
+        primaryOpposite: "var(--color-bg-primary-opposite)",
+        secondaryOpposite: "var(--color-bg-secondary-opposite)",
       },
       textColor: {
         primary: "var(--color-text-primary)",

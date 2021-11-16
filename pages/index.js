@@ -7,7 +7,7 @@ export default function Home() {
         <title>Manish Karki</title>
       </Head>
 
-      <div className="bodyContainer">
+      <div className="mt-32 bodyContainer">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus neque
           eius doloremque doloribus voluptates vitae veniam commodi dolores.

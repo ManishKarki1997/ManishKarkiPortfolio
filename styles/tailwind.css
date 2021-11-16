@@ -8,8 +8,10 @@
 
 .dark {
   --color-bg-primary: #040407;
-  --color-bg-secondary: #0c172a;
+  --color-bg-secondary: #040407;
   --color-bg-accent: #004de4;
+  --color-bg-primary-opposite: #ffffff;
+  --color-bg-secondary-opposite: #edf2f7;
 
   --color-text-primary: #ffffff;
   /* --color-text-secondary: #e5e7eb; */
@@ -21,6 +23,8 @@
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #edf2f7;
   --color-bg-accent: #004de4;
+  --color-bg-primary-opposite: #040407;
+  --color-bg-secondary-opposite: #040407;
 
   /* --color-text-primary: #031b4e; */
   --color-text-primary: #000;

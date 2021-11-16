@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import gsap from "gsap/dist/gsap";
-import { HiMenuAlt4 } from "react-icons/hi";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 
+import HamburgerMenu from "./HamburgerMenu";
 import useDarkMode from "../hooks/useDarkMode";
 
 const menuLinks = [
@@ -240,12 +240,10 @@ const Header = () => {
             </h1>
           </Link>
 
-          <button
-            onClick={() => handleNavToggle()}
-            className="cursor-pointer text-primary menu-btn"
-          >
-            <HiMenuAlt4 size={24} className="fill-current" />
-          </button>
+          <HamburgerMenu
+            navExpanded={navExpanded}
+            handleNavToggle={handleNavToggle}
+          />
         </div>
       </header>
     </>
