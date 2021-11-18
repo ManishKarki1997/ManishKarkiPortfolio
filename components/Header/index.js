@@ -3,7 +3,6 @@ import Link from "next/link";
 import gsap from "gsap/dist/gsap";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 
-import "./Header.module.css";
 import HamburgerMenu from "./HamburgerMenu";
 import useDarkMode from "../../hooks/useDarkMode";
 
@@ -124,15 +123,15 @@ const Header = () => {
       transform: "rotate(20deg)",
     });
 
-    navTimelineRef.current.to(
-      ".menu-btn",
-      {
-        marginRight: "14px",
-        duration: 1,
-        ease: "Power4.easeInOut",
-      },
-      "-=1"
-    );
+    // navTimelineRef.current.to(
+    //   ".menu-btn",
+    //   {
+    //     marginRight: "14px",
+    //     duration: 1,
+    //     ease: "Power4.easeInOut",
+    //   },
+    //   "-=1"
+    // );
 
     navTimelineRef.current.to(".menu-links li", {
       ease: "power4.easeInOut",
@@ -165,13 +164,13 @@ const Header = () => {
   return (
     <>
       {/* w-full h-screen */}
-      <nav className="fixed top-0 right-0 w-full h-screen opacity-1 bg-primary z-25 navigation">
-        {/* <nav className="fixed top-0 right-0 w-full h-screen opacity-1 bg-primary z-25 navigation"> */}
+      <nav className="fixed top-0 right-0 w-full h-screen opacity-0 bg-primary z-25 navigation">
+        {/* <nav className="fixed top-0 right-0 w-full h-screen opacity-0 bg-primary z-25 navigation"> */}
         <div className="circle-wrapper">
           <div
             onMouseOver={() => circleHoverRef.current.play()}
             onMouseLeave={() => circleHoverRef.current.reverse()}
-            className="opacity-1 circle"
+            className="opacity-0 circle"
           >
             <span className="top"></span>
             <span className="bottom"></span>
@@ -182,14 +181,16 @@ const Header = () => {
           <ul className="w-full lg:w-1/2 menu-links">
             {menuLinks.map((menuItem) => (
               <li
-                onFocus={() => setHoveredMenuItem(menuItem)}
-                onMouseEnter={() => setHoveredMenuItem(menuItem)}
-                onMouseLeave={() => setHoveredMenuItem(null)}
                 key={menuItem.href}
-                className="mb-8 text-2xl font-black uppercase opacity-1 menu-link lg:text-6xl"
+                className="mb-8 text-2xl font-black uppercase opacity-0 menu-link lg:text-6xl"
               >
                 <Link passHref href={menuItem.href}>
-                  <a className="text-tertiary">
+                  <a
+                    onFocus={() => setHoveredMenuItem(menuItem)}
+                    onMouseEnter={() => setHoveredMenuItem(menuItem)}
+                    onMouseLeave={() => setHoveredMenuItem(null)}
+                    className="text-tertiary"
+                  >
                     <span
                       data-menu-text={menuItem.name}
                       className="menu-link-text"
@@ -201,7 +202,7 @@ const Header = () => {
               </li>
             ))}
 
-            <li className="mb-8 opacity-1 not-menu-link resume-li">
+            <li className="mb-8 opacity-0 not-menu-link resume-li">
               <button className="px-4 py-1 text-2xl font-black text-white uppercase lg:text-6xl bg-accent">
                 Resume
               </button>

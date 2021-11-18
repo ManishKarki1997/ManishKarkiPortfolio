@@ -27,6 +27,7 @@ const HamburgerMenu = ({ navExpanded, handleNavToggle }) => {
 
   const onClickHamburgerIcon = () => {
     handleNavToggle();
+
     if (!navExpanded) {
       timelineRef.current.play();
     } else {
