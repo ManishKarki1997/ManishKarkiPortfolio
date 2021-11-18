@@ -13,6 +13,7 @@ module.exports = {
       textColor: {
         primary: "var(--color-text-primary)",
         secondary: "var(--color-text-secondary)",
+        tertiary: "var(--color-text-tertiary)",
         accent: "var(--color-text-accent)",
       },
     },

@@ -3,8 +3,9 @@ import Link from "next/link";
 import gsap from "gsap/dist/gsap";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 
+import "./Header.module.css";
 import HamburgerMenu from "./HamburgerMenu";
-import useDarkMode from "../hooks/useDarkMode";
+import useDarkMode from "../../hooks/useDarkMode";
 
 const menuLinks = [
   {
@@ -164,7 +165,7 @@ const Header = () => {
   return (
     <>
       {/* w-full h-screen */}
-      <nav className="fixed top-0 right-0 w-full h-screen opacity-0 bg-primary z-25 navigation">
+      <nav className="fixed top-0 right-0 w-full h-screen opacity-1 bg-primary z-25 navigation">
         {/* <nav className="fixed top-0 right-0 w-full h-screen opacity-1 bg-primary z-25 navigation"> */}
         <div className="circle-wrapper">
           <div
@@ -185,14 +186,23 @@ const Header = () => {
                 onMouseEnter={() => setHoveredMenuItem(menuItem)}
                 onMouseLeave={() => setHoveredMenuItem(null)}
                 key={menuItem.href}
-                className="mb-8 text-2xl font-black uppercase opacity-0 menu-link lg:text-6xl text-primary"
+                className="mb-8 text-2xl font-black uppercase opacity-1 menu-link lg:text-6xl"
               >
-                <Link href={menuItem.href}>{menuItem.name}</Link>
+                <Link passHref href={menuItem.href}>
+                  <a className="text-tertiary">
+                    <span
+                      data-menu-text={menuItem.name}
+                      className="menu-link-text"
+                    >
+                      {menuItem.name}
+                    </span>
+                  </a>
+                </Link>
               </li>
             ))}
 
-            <li className="mb-8 opacity-0 not-menu-link resume-li">
-              <button className="text-2xl font-black uppercase lg:text-6xl text-primary">
+            <li className="mb-8 opacity-1 not-menu-link resume-li">
+              <button className="px-4 py-1 text-2xl font-black text-white uppercase lg:text-6xl bg-accent">
                 Resume
               </button>
             </li>

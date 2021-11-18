@@ -68,3 +68,22 @@ p {
   /* transform: scaleY(1); */
   /* transform: rotate(2deg); */
 }
+
+.menu-link a {
+  position: relative;
+}
+
+.menu-link-text::before {
+  position: absolute;
+  content: attr(data-menu-text);
+  display: inline-block;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--color-text-accent);
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-link-text:hover::before {
+  width: 100%;
+}
