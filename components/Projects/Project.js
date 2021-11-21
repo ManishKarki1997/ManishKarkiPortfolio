@@ -1,40 +1,36 @@
 import React from "react";
 import Image from "next/image";
 import gsap from "gsap/dist/gsap";
+import { useInView } from "react-intersection-observer";
 
 import { AiFillGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
-import { IoIosRepeat } from "react-icons/io";
 
 const Project = ({ project, idx }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+  });
   const projectTimelineRef = React.useRef(null);
-
-  let x = 1;
-
-  const repeatAnimation = () => {
-    if (x % 2 === 0) {
-      projectTimelineRef.current.timeScale(1).play();
-    } else {
-      projectTimelineRef.current.timeScale(1.6).reverse();
-    }
-
-    x++;
-  };
 
   React.useEffect(() => {
     projectTimelineRef.current = gsap.timeline({
-      // paused:true
+      paused: true,
     });
 
     projectTimelineRef.current
-      .to(".overlay", {
+      .to(`.project-${idx + 1}`, {
+        autoAlpha: 1,
+        duration: 0.3,
+        ease: "sine.inOut",
+      })
+      .to(`.project-${idx + 1} .overlay`, {
         width: 0,
-        duration: 1.5,
+        duration: 0.5,
         autoAlpha: 1,
         ease: "sine.inOut",
       })
       .fromTo(
-        ".project-name",
+        `.project-${idx + 1} .project-name`,
         {
           duration: 0.6,
           autoAlpha: 0,
@@ -46,7 +42,7 @@ const Project = ({ project, idx }) => {
         }
       )
       .fromTo(
-        ".project-description",
+        `.project-${idx + 1} .project-description `,
         {
           duration: 0.6,
           autoAlpha: 0,
@@ -79,9 +75,19 @@ const Project = ({ project, idx }) => {
     return () => projectTimelineRef.current.kill();
   }, [idx]);
 
+  React.useEffect(() => {
+    if (inView) {
+      console.log(project.name);
+      projectTimelineRef.current.play();
+    } else {
+      //   projectTimelineRef.current.timeScale(1.5).reverse();
+    }
+  }, [inView]);
+
   return (
     <div
-      className={`project w-full mb-16 md:w-7/12 flex flex-col project-${
+      ref={ref}
+      className={`project opacity-0 w-full mb-16 md:w-7/12 flex flex-col project-${
         idx + 1
       } ${idx % 2 === 0 ? "items-start" : " ml-auto items-end"}`}
     >
@@ -89,9 +95,6 @@ const Project = ({ project, idx }) => {
         <h4 className="text-xl font-semibold lg:text-3xl text-primary project-name">
           {project.name}.
         </h4>
-        <button className="text-accent" onClick={() => repeatAnimation()}>
-          <IoIosRepeat size={20} />
-        </button>
       </div>
 
       <div className="relative w-full my-6 image-wrapper">
