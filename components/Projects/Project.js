@@ -77,7 +77,6 @@ const Project = ({ project, idx }) => {
 
   React.useEffect(() => {
     if (inView) {
-      console.log(project.name);
       projectTimelineRef.current.play();
     } else {
       //   projectTimelineRef.current.timeScale(1.5).reverse();

@@ -43,7 +43,7 @@ const Header = () => {
 
   const handleNavToggle = () => {
     setNavExpanded(!navExpanded);
-
+    document.querySelector(".navigation")?.classList.add("z-20");
     if (!navExpanded) {
       navTimelineRef.current.timeScale(1).play();
     } else {
@@ -164,7 +164,7 @@ const Header = () => {
   return (
     <>
       {/* w-full h-screen */}
-      <nav className="fixed top-0 right-0 hidden w-full h-screen opacity-0 bg-primary z-25 navigation">
+      <nav className="fixed top-0 right-0 w-full h-screen opacity-0 bg-primary navigation">
         {/* <nav className="fixed top-0 right-0 w-full h-screen opacity-0 bg-primary z-25 navigation"> */}
         <div className="circle-wrapper">
           <div
