@@ -3,7 +3,7 @@ import React from "react";
 import usePrefersDarkMode from "./usePrefersDarkMode";
 import useLocalStorage from "./useLocalStorage";
 
-const localStorageThemeKey = "manish-karki-theme";
+const localStorageThemeKey = "manish-karki-is-dark-theme";
 
 const useDarkMode = () => {
   const prefersDarkMode = usePrefersDarkMode();

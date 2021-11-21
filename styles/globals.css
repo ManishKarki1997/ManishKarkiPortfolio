@@ -28,6 +28,23 @@ p {
   color: var(--color-text-secondary);
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar-handle);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-handle-hover);
+}
+
 .circle-wrapper {
   position: fixed;
   top: 50%;

@@ -23,12 +23,6 @@ const Project = ({ project, idx }) => {
         duration: 0.3,
         ease: "sine.inOut",
       })
-      .to(`.project-${idx + 1} .overlay`, {
-        width: 0,
-        duration: 0.5,
-        autoAlpha: 1,
-        ease: "sine.inOut",
-      })
       .fromTo(
         `.project-${idx + 1} .project-name`,
         {
@@ -41,6 +35,13 @@ const Project = ({ project, idx }) => {
           autoAlpha: 1,
         }
       )
+      .to(`.project-${idx + 1} .overlay`, {
+        width: 0,
+        duration: 0.5,
+        autoAlpha: 1,
+        ease: "sine.inOut",
+      })
+      
       .fromTo(
         `.project-${idx + 1} .project-description `,
         {

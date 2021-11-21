@@ -18,6 +18,11 @@
   --color-text-secondary: #c0c2c6;
   --color-text-tertiary: #adaeb1;
   --color-text-accent: #2c87bb;
+
+  /* scrollbar colors */
+  --color-scrollbar-track: #040407;
+  --color-scrollbar-handle: #808080;
+  --color-scrollbar-handle-hover: #969595;
 }
 
 .light {
@@ -29,7 +34,12 @@
 
   /* --color-text-primary: #031b4e; */
   --color-text-primary: #000;
-  --color-text-secondary: rgba(3, 27, 78, 0.7);
-  --color-text-tertiary: rgba(6, 32, 88, 0.7);
+  --color-text-secondary: rgba(2, 17, 48, 0.7);
+  --color-text-tertiary: rgba(4, 18, 48, 0.7);
   --color-text-accent: #2c87bb;
+
+  /* scrollbar colors */
+  --color-scrollbar-track: #ffffff;
+  --color-scrollbar-handle: #757575;
+  --color-scrollbar-handle-hover: #858383;
 }
