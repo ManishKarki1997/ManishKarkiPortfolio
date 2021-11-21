@@ -255,13 +255,21 @@ const Header = () => {
                 M
               </span>
 
-              <span className="mb-2 text-2xl lg:ml-11 md:ml-11 brand-letter">
+              <span className="hidden mb-2 text-2xl lg:ml-11 md:ml-11 brand-letter md:inline-block">
                 a
               </span>
-              <span className="text-2xl brand-letter ">n</span>
-              <span className="text-2xl brand-letter ">i</span>
-              <span className="text-2xl brand-letter ">s</span>
-              <span className="text-2xl brand-letter ">h</span>
+              <span className="hidden text-2xl brand-letter md:inline-block">
+                n
+              </span>
+              <span className="hidden text-2xl brand-letter md:inline-block ">
+                i
+              </span>
+              <span className="hidden text-2xl brand-letter md:inline-block ">
+                s
+              </span>
+              <span className="hidden text-2xl brand-letter md:inline-block ">
+                h
+              </span>
             </h1>
           </Link>
 

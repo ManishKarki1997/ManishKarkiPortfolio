@@ -45,7 +45,7 @@ const projects = [
     },
   },
   {
-    name: "Hill",
+    name: "Beautiful Hill",
     imageUrl:
       "https://images.unsplash.com/photo-1605241577524-5fd5e41fca65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
     description: `
@@ -60,7 +60,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="w-full">
+    <div className="container w-full">
       {projects.map((project, idx) => (
         <Project key={project.name} idx={idx} project={project} />
       ))}
