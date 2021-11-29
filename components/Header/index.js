@@ -79,6 +79,7 @@ const Header = () => {
     navTimelineRef.current.to(".navigation", {
       transformOrigin: "center right",
       autoAlpha: 1,
+      display: "block",
       // width: "100vw",
       // height: "100vh",
       duration: 0.7,
@@ -164,7 +165,7 @@ const Header = () => {
   return (
     <>
       {/* w-full h-screen */}
-      <nav className="fixed top-0 right-0 w-full h-screen opacity-0 bg-primary navigation">
+      <nav className="fixed top-0 right-0 hidden w-full h-screen opacity-0 bg-primary navigation">
         {/* <nav className="fixed top-0 right-0 w-full h-screen opacity-0 bg-primary z-25 navigation"> */}
         <div className="circle-wrapper">
           <div
