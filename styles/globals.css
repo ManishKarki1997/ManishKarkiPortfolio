@@ -107,11 +107,18 @@ p {
 }
 
 .tech-stacks-wrapper .tech-stack {
-  animation: techStacksAnimation 20s linear infinite;
+  animation: techStacksAnimation 60s linear infinite;
 }
 
 .tech-stacks-wrapper:hover .tech-stack {
   animation-play-state: paused;
+}
+
+.tech-stack-item svg {
+  color: currentColor;
+}
+.tech-stack-item {
+  color: var(--color-text-tertiary);
 }
 
 @keyframes techStacksAnimation {

@@ -9,6 +9,9 @@ import {
   SiSocketdotio,
   SiVuedotjs,
   SiNextdotjs,
+  SiSass,
+  SiExpress,
+  SiGithub,
 } from "react-icons/si";
 
 import gsap from "gsap/dist/gsap";
@@ -19,43 +22,58 @@ gsap.registerPlugin(ScrollTrigger);
 const stacks = [
   {
     name: "Node JS",
-    hoverColor: "blue",
+    hoverColor: "blue-600",
     icon: <SiNodedotjs size={48} />,
   },
   {
+    name: "Express JS",
+    hoverColor: "blue-600",
+    icon: <SiExpress size={48} />,
+  },
+  {
     name: "Vue JS",
-    hoverColor: "green",
+    hoverColor: "green-600",
     icon: <SiVuedotjs size={48} />,
   },
   {
     name: "Nuxt",
-    hoverColor: "blue",
+    hoverColor: "green-600",
     icon: <SiNuxtdotjs size={48} />,
   },
   {
     name: "MySQL",
-    hoverColor: "blue",
+    hoverColor: "blue-600",
     icon: <SiMysql size={48} />,
   },
   {
     name: "MongoDB",
-    hoverColor: "blue",
+    hoverColor: "green-600",
     icon: <SiMongodb size={48} />,
   },
   {
     name: "Socket.io",
-    hoverColor: "blue",
+    hoverColor: "blue-600",
     icon: <SiSocketdotio size={48} />,
   },
   {
     name: "React",
-    hoverColor: "blue",
+    hoverColor: "blue-600",
     icon: <FaReact size={48} />,
   },
   {
     name: "Next JS",
-    hoverColor: "blue",
+    hoverColor: "blue-600",
     icon: <SiNextdotjs size={48} />,
+  },
+  {
+    name: "SASS",
+    hoverColor: "red-600",
+    icon: <SiSass size={48} />,
+  },
+  {
+    name: "Github",
+    hoverColor: "gray-600",
+    icon: <SiGithub size={48} />,
   },
 ];
 
@@ -64,11 +82,12 @@ const TechStack = ({ stack, idx }) => {
     <a
       className={`${
         idx % 2 ? "mt-6" : "-mt-6"
-      } tech-stack-item w-32 mx-16 h-auto`}
+      } tech-stack-item w-32 mx-16 h-auto hover:text-${stack.hoverColor}`}
       href=""
       target="_blank"
+      title={stack.name}
     >
-      <p>{stack.icon}</p>
+      {stack.icon}
     </a>
   );
 };
