@@ -32,12 +32,12 @@ const stacks = [
   },
   {
     name: "Vue JS",
-    hoverColor: "green-600",
+    hoverColor: "green-500",
     icon: <SiVuedotjs title="Vue JS" size={56} />,
   },
   {
     name: "Nuxt",
-    hoverColor: "green-600",
+    hoverColor: "green-500",
     icon: <SiNuxtdotjs title="Nuxt JS" size={56} />,
   },
   {
@@ -47,7 +47,7 @@ const stacks = [
   },
   {
     name: "MongoDB",
-    hoverColor: "green-600",
+    hoverColor: "green-500",
     icon: <SiMongodb title="MongoDB" size={56} />,
   },
   {

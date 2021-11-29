@@ -17,7 +17,7 @@ const SecondaryProject = ({ project }) => {
         <p className="font-medium text-tertiary">{project.description}</p>
       </div>
 
-      <div className="flex flex-wrap items-center my-4">
+      <div className="flex flex-wrap items-center my-6">
         {project.techStacks.map((stack) => (
           <p
             className="mb-1 mr-3 text-sm text-accent"

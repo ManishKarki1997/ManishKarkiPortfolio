@@ -24,6 +24,10 @@ body {
   @apply max-w-screen-xl px-12 mx-auto md:px-24;
 }
 
+.section-header {
+  @apply mb-8 text-4xl font-bold text-primary;
+}
+
 p {
   color: var(--color-text-secondary);
 }

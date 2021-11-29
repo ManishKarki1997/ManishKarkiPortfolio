@@ -4,7 +4,7 @@ import {
   AiOutlineCloudServer,
   AiFillAppstore,
 } from "react-icons/ai";
-import { BiLinkExternal } from "react-icons/bi";
+import { MdOutlineOndemandVideo } from "react-icons/md";
 import { DiAndroid } from "react-icons/di";
 
 import SecondaryProject from "./SecondaryProject";
@@ -13,11 +13,17 @@ const projects = [
   {
     name: "Organize App",
     featuredImage: "/images/projects/Organize App Mockup.png",
-    description: `A Vue/Electron application that organizes your files under pre-set folders.
-        Choose your files, set folders to group common files under then the app organizes the directory accordingly.
+    description: `A Vue 3 & Electron application that organizes your files in a directory according to your set-up settings by looking at the file extensions
             `,
-    techStacks: ["Nuxt", "Electron", "Native UI"],
+    techStacks: ["Vue 3", "Electron", "Native UI"],
     links: [
+      {
+        name: "Demo Video",
+        color: "blue-200",
+        hoverColor: "blue-600",
+        href: "https://res.cloudinary.com/dnoibyqq2/image/upload/v1636438880/organize-app-demo.gif",
+        icon: <MdOutlineOndemandVideo title="Demo Video" size={24} />,
+      },
       {
         name: "Github",
         color: "gray-200",
@@ -37,12 +43,18 @@ const projects = [
   {
     name: "Genshin Impact Guide App",
     featuredImage: "/images/projects/Genshin App Mockup Galaxy S10.png",
-    description: `An app made to help farm for materials, view character and weapon information,
-       setting notifications for resin refill and parametric transformer for the game Genshin Impact.
-       Also a publicly available free API to access these data.
+    description: `A Genshin Impact fanapp to view farming materials, character info, setup notifications
+    as well as a free public API
         `,
     techStacks: ["React Native", "Styled Components", "Node JS"],
     links: [
+      {
+        name: "Demo Video",
+        color: "blue-200",
+        hoverColor: "blue-600",
+        href: "https://res.cloudinary.com/dnoibyqq2/video/upload/v1637241832/genshin-app-demo.mp4",
+        icon: <MdOutlineOndemandVideo title="Demo Video" size={24} />,
+      },
       {
         name: "Github",
         color: "gray-200",
@@ -69,11 +81,17 @@ const projects = [
   {
     name: "Flutter Wallpapers App",
     featuredImage: "/images/projects/Flutter Wallpaper App Galaxy S10.png",
-    description: `A wallpaper app made with Flutter to view wallpapers that is scraped from a backend server which scrapes wallpapers
-    from third-party websites. Has functionalities like dark mode, pull-on-refresh, draggable sheets, download images, settings to set HD/SD images etc.
+    description: `A wallpaper app with functionalities like dark mode, pull-on-refresh, draggable sheets, download images, etc.
         `,
     techStacks: ["Flutter", "Node JS"],
     links: [
+      {
+        name: "Demo Video",
+        color: "blue-200",
+        hoverColor: "blue-600",
+        href: "https://res.cloudinary.com/dnoibyqq2/video/upload/v1638186658/Flutter_wallpaper_demo.mp4",
+        icon: <MdOutlineOndemandVideo title="Demo Video" size={24} />,
+      },
       {
         name: "Github",
         color: "gray-200",
@@ -103,7 +121,7 @@ const SecondaryProjects = () => {
   return (
     <div className="container w-full mt-48 bg-primary">
       <div className="w-full text-center">
-        <h2 className="text-xl text-primary">Some more projects</h2>
+        <h3 className="section-header">Some more projects</h3>
       </div>
 
       <div className="grid grid-cols-1 mt-8 projects md:grid-cols-3 gap-x-8 gap-y-8">

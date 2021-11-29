@@ -16,6 +16,9 @@ module.exports = {
         tertiary: "var(--color-text-tertiary)",
         accent: "var(--color-text-accent)",
       },
+      borderColor: {
+        primary: "var(--color-border-primary)",
+      },
     },
   },
   variants: {
