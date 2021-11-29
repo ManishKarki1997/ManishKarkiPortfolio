@@ -94,7 +94,7 @@ const Project = ({ project, idx }) => {
       `}
     >
       <div
-        style={{ maxHeight: "600px" }}
+        style={{ maxHeight: "700px" }}
         className={`relative w-full h-full my-6 image-wrapper xl:w-7/12 ${
           idx % 2 === 0 ? " order-none" : "lg:order-1"
         }`}
