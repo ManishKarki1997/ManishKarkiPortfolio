@@ -36,8 +36,6 @@ const SecondaryProject = ({ project, idx }) => {
   React.useEffect(() => {
     if (inView) {
       projectTimelineRef.current.play();
-    } else {
-      projectTimelineRef.current.timeScale(1.5).reverse();
     }
   }, [inView]);
 

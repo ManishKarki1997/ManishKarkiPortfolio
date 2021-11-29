@@ -122,6 +122,8 @@ const projects = [
 ];
 
 const SecondaryProjects = () => {
+  const [isAnimPlayed, setIsAnimPlayed] = React.useState(false);
+
   const { ref, inView } = useInView({
     threshold: 0.3,
   });
@@ -150,6 +152,7 @@ const SecondaryProjects = () => {
   React.useEffect(() => {
     if (inView) {
       timeline.current.play();
+      setIsAnimPlayed(true);
     }
   }, [inView]);
 

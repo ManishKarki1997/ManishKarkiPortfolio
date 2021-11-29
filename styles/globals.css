@@ -125,6 +125,15 @@ p {
   color: var(--color-text-tertiary);
 }
 
+/* get in touch */
+.mail-btn:hover svg {
+  transform: rotate(-30deg);
+  transition: transform 0.3s ease-in-out;
+}
+.mail-btn svg {
+  transition: transform 0.3s ease-in-out;
+}
+
 @media (max-width: 641px) {
   .tech-stacks-wrapper .tech-stack {
     animation-play-state: paused;
