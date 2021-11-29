@@ -1,3 +1,7 @@
+import React from "react";
+import gsap from "gsap/dist/gsap";
+import { useInView } from "react-intersection-observer";
+
 import {
   AiFillGithub,
   AiOutlineApi,
@@ -118,16 +122,48 @@ const projects = [
 ];
 
 const SecondaryProjects = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+  });
+
+  const timeline = React.useRef(null);
+
+  React.useEffect(() => {
+    timeline.current = gsap.timeline({ paused: true });
+    timeline.current.fromTo(
+      ".section-header",
+      {
+        y: 20,
+        autoAlpha: 0,
+      },
+      {
+        y: 0,
+        autoAlpha: 1,
+        duration: 0.3,
+        ease: "sine.inOut",
+      }
+    );
+
+    return () => timeline.current.kill();
+  }, []);
+
+  React.useEffect(() => {
+    if (inView) {
+      timeline.current.play();
+    }
+  }, [inView]);
+
   return (
-    <div className="container w-full mt-48 bg-primary">
+    <div ref={ref} className="container w-full mt-48 bg-primary">
       <div className="w-full text-center">
         <h3 className="section-header">Some more projects</h3>
       </div>
 
       <div className="grid grid-cols-1 mt-8 projects md:grid-cols-3 gap-x-8 gap-y-8">
-        {projects.map((project) => (
+        {projects.map((project, idx) => (
           <SecondaryProject
             key={"secondary-project-" + project.name}
+            idx={idx}
             project={project}
           />
         ))}
