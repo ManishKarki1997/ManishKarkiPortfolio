@@ -23,57 +23,57 @@ const stacks = [
   {
     name: "Node JS",
     hoverColor: "blue-600",
-    icon: <SiNodedotjs title="Node JS" size={48} />,
+    icon: <SiNodedotjs title="Node JS" size={56} />,
   },
   {
     name: "Express JS",
     hoverColor: "blue-600",
-    icon: <SiExpress title="Express JS" size={48} />,
+    icon: <SiExpress title="Express JS" size={56} />,
   },
   {
     name: "Vue JS",
     hoverColor: "green-600",
-    icon: <SiVuedotjs title="Vue JS" size={48} />,
+    icon: <SiVuedotjs title="Vue JS" size={56} />,
   },
   {
     name: "Nuxt",
     hoverColor: "green-600",
-    icon: <SiNuxtdotjs title="Nuxt JS" size={48} />,
+    icon: <SiNuxtdotjs title="Nuxt JS" size={56} />,
   },
   {
     name: "MySQL",
     hoverColor: "blue-600",
-    icon: <SiMysql title="MySQL" size={48} />,
+    icon: <SiMysql title="MySQL" size={56} />,
   },
   {
     name: "MongoDB",
     hoverColor: "green-600",
-    icon: <SiMongodb title="MongoDB" size={48} />,
+    icon: <SiMongodb title="MongoDB" size={56} />,
   },
   {
     name: "Socket.io",
     hoverColor: "blue-600",
-    icon: <SiSocketdotio title="Socket.io" size={48} />,
+    icon: <SiSocketdotio title="Socket.io" size={56} />,
   },
   {
     name: "React",
     hoverColor: "blue-600",
-    icon: <FaReact title="React" size={48} />,
+    icon: <FaReact title="React" size={56} />,
   },
   {
     name: "Next JS",
     hoverColor: "blue-600",
-    icon: <SiNextdotjs title="Next JS" size={48} />,
+    icon: <SiNextdotjs title="Next JS" size={56} />,
   },
   {
     name: "SASS",
-    hoverColor: "red-600",
-    icon: <SiSass title="SASS" size={48} />,
+    hoverColor: "red-400",
+    icon: <SiSass title="SASS" size={56} />,
   },
   {
     name: "Github",
     hoverColor: "gray-600",
-    icon: <SiGithub title="Github" size={48} />,
+    icon: <SiGithub title="Github" size={56} />,
   },
 ];
 
