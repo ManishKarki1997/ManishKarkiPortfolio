@@ -81,8 +81,10 @@ const TechStack = ({ stack, idx }) => {
   return (
     <a
       className={`${
-        idx % 2 ? "mt-6" : "-mt-6"
-      } tech-stack-item w-32 mx-16 h-auto hover:text-${stack.hoverColor}`}
+        idx % 2 ? "md:mt-6" : "md:-mt-6"
+      } tech-stack-item mt-0 w-32 md:mx-16  my-24 md:my-0 mx-0 h-auto flex items-center justify-center hover:text-${
+        stack.hoverColor
+      }`}
       href=""
       target="_blank"
       title={stack.name}
@@ -95,13 +97,13 @@ const TechStack = ({ stack, idx }) => {
 const TechStacks = () => {
   return (
     <div className="container bg-primary">
-      <div className="flex items-center h-32 overflow-hidden tech-stacks-wrapper">
-        <div className="flex justify-between tech-stack">
+      <div className="flex items-center h-auto overflow-hidden md:h-32 tech-stacks-wrapper">
+        <div className="flex flex-wrap justify-between w-full tech-stack md:flex-nowrap md:w-auto">
           {stacks.map((stack, idx) => (
             <TechStack key={stack.name + "1"} idx={idx} stack={stack} />
           ))}
         </div>
-        <div className="flex justify-between tech-stack">
+        <div className="justify-between hidden md:flex tech-stack">
           {stacks.map((stack, idx) => (
             <TechStack key={stack.name + "2"} idx={idx} stack={stack} />
           ))}

@@ -121,6 +121,17 @@ p {
   color: var(--color-text-tertiary);
 }
 
+@media (max-width: 641px) {
+  .tech-stacks-wrapper .tech-stack {
+    animation-play-state: paused;
+  }
+
+  .tech-stack svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 @keyframes techStacksAnimation {
   0% {
     transform: translateX(0);
