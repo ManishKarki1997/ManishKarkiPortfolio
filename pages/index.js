@@ -6,7 +6,7 @@ import GetInTouch from "../components/GetInTouch";
 
 export default function Home() {
   return (
-    <div className="min-h-screen pt-32 ">
+    <div className="min-h-screen pt-32 pb-32">
       <Head>
         <title>Manish Karki</title>
       </Head>
