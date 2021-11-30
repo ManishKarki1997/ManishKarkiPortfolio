@@ -10,7 +10,6 @@ export default function Home() {
       <Head>
         <title>Manish Karki</title>
       </Head>
-
       <Projects />
       <TechStacks />
       <SecondaryProjects />

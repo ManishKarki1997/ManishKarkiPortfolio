@@ -5,6 +5,7 @@ import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 
 import HamburgerMenu from "./HamburgerMenu";
 import useDarkMode from "../../hooks/useDarkMode";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const menuLinks = [
   {
@@ -15,35 +16,34 @@ const menuLinks = [
   {
     name: "Projects",
     href: "/projects",
-    content: "See some of the stuffs I made",
+    content: `See some of the stuffs I made`,
   },
   {
     name: "Blog",
     href: "/blog",
-    content:
-      "Just writing some things that I find interesting. Maybe something I learnt or some tutorials on how to do stuff",
+    content: `Just writing some things that I find interesting. Maybe something I learnt or some tutorials on how to do stuff`,
   },
   {
     name: "About Me",
     href: "/about-me",
-    content: "Let's know something about me and what I do",
+    content: `Let's know something about me and what I do`,
   },
 ];
 
 const Header = () => {
   const [navExpanded, setNavExpanded] = React.useState(false);
   const [hoveredMenuItem, setHoveredMenuItem] = React.useState(null);
+  const navTimelineRef = React.useRef(null);
+  const [isDarkMode, setIsDarkMode] = useDarkMode();
+  const [width] = useWindowSize();
 
   // so that i don't have to animate the letters when mega menu is toggled
   // otherwise, even if scroll way bottom and then clicked mega menu, these letters show up (due to gsap)
   const [isLettersAnimated, setIsLettersAnimated] = React.useState(false);
 
-  const [isDarkMode, setIsDarkMode] = useDarkMode();
-  const navTimelineRef = React.useRef(null);
-
   const handleNavToggle = () => {
     setNavExpanded(!navExpanded);
-    document.querySelector(".navigation")?.classList.add("z-20");
+    document.querySelector(".navigation")?.classList.add("z-50");
     if (!navExpanded) {
       navTimelineRef.current.timeScale(1).play();
     } else {
@@ -80,59 +80,49 @@ const Header = () => {
       transformOrigin: "center right",
       autoAlpha: 1,
       display: "block",
-      // width: "100vw",
-      // height: "100vh",
       duration: 0.7,
       ease: "Power1.easeInOut",
     });
 
-    navTimelineRef.current.to(".letter-m", {
-      ease: "power2.easeInOut",
-      css: {
-        zIndex: 25,
+    // don't animate on mobile device
+    if (width > 640) {
+      navTimelineRef.current.to(".letter-m", {
+        ease: "power2.easeInOut",
+        css: {
+          zIndex: 25,
 
-        transform: "translate(-50%,-50%)",
-        top: "50%",
-        left: "50%",
-      },
-    });
+          transform: "translate(-50%,-50%)",
+          top: "50%",
+          left: "50%",
+        },
+      });
+      navTimelineRef.current.to(
+        ".circle .bottom",
+        {
+          ease: "power4.easeInOut",
+          autoAlpha: 1,
+          duration: 0.4,
+          transform: "scaleY(1)",
+        },
+        "-=.5"
+      );
+      navTimelineRef.current.to(
+        ".circle .top",
+        {
+          ease: "power4.easeInOut",
 
-    navTimelineRef.current.to(
-      ".circle .bottom",
-      {
-        ease: "power4.easeInOut",
+          autoAlpha: 1,
+          duration: 0.4,
+          transform: "scaleY(1)",
+        },
+        "-=.5"
+      );
+
+      navTimelineRef.current.to(".circle", {
         autoAlpha: 1,
-        duration: 0.4,
-        transform: "scaleY(1)",
-      },
-      "-=.5"
-    );
-    navTimelineRef.current.to(
-      ".circle .top",
-      {
-        ease: "power4.easeInOut",
-
-        autoAlpha: 1,
-        duration: 0.4,
-        transform: "scaleY(1)",
-      },
-      "-=.5"
-    );
-
-    navTimelineRef.current.to(".circle", {
-      autoAlpha: 1,
-      transform: "rotate(20deg)",
-    });
-
-    // navTimelineRef.current.to(
-    //   ".menu-btn",
-    //   {
-    //     marginRight: "14px",
-    //     duration: 1,
-    //     ease: "Power4.easeInOut",
-    //   },
-    //   "-=1"
-    // );
+        transform: "rotate(20deg)",
+      });
+    }
 
     navTimelineRef.current.to(".menu-links li", {
       ease: "power4.easeInOut",
@@ -160,13 +150,12 @@ const Header = () => {
         amount: 0.2,
       },
     });
-  }, [isLettersAnimated]);
+  }, [isLettersAnimated, width]);
 
   return (
     <>
-      {/* w-full h-screen */}
-      <nav className="fixed top-0 right-0 hidden w-full h-screen opacity-0 bg-primary navigation">
-        {/* <nav className="fixed top-0 right-0 w-full h-screen opacity-0 bg-primary z-25 navigation"> */}
+      {/* <MobileMenu /> */}
+      <nav className="fixed top-0 right-0 z-50 hidden w-full h-screen opacity-0 bg-primary navigation">
         <div className="circle-wrapper">
           <div
             onMouseOver={() => circleHoverRef.current.play()}
@@ -179,7 +168,7 @@ const Header = () => {
         </div>
 
         <div className="container flex w-full h-full lg:items-center">
-          <ul className="w-full lg:w-1/2 menu-links">
+          <ul className="flex flex-col justify-center w-full lg:w-1/2 menu-links lg:justify-start">
             {menuLinks.map((menuItem) => (
               <li
                 key={menuItem.href}
@@ -210,7 +199,7 @@ const Header = () => {
             </li>
           </ul>
 
-          <div className="flex flex-col items-end justify-center w-full h-full py-16 lg:w-1/2">
+          <div className="flex-col items-end justify-center hidden w-full h-full py-16 md:flex lg:w-1/2">
             <div className="w-9/12 px-4 py-4 mt-auto hover-content justify-self-center ">
               {hoveredMenuItem && (
                 <p className="text-lg font-semibold text-secondary">
@@ -247,7 +236,7 @@ const Header = () => {
         </div>
       </nav>
 
-      <header className="fixed top-0 left-0 z-50 w-full h-24 py-6 ">
+      <header className="fixed top-0 left-0 z-50 w-full h-24 py-6 md:block">
         <div className="container flex items-center justify-between">
           {/* eslint-disable-next-line @next/next/link-passhref */}
           <Link href="/">
