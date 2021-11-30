@@ -3,9 +3,6 @@ import Image from "next/image";
 import gsap from "gsap/dist/gsap";
 import { useInView } from "react-intersection-observer";
 
-import { AiFillGithub } from "react-icons/ai";
-import { BiLinkExternal } from "react-icons/bi";
-
 const Project = ({ project, idx }) => {
   const { ref, inView } = useInView({
     threshold: 0.3,
@@ -115,10 +112,10 @@ const Project = ({ project, idx }) => {
       </div>
 
       <div className="w-full project-content-wrapper xl:w-5/12">
-        <div className="relative px-2 py-6 xl:py-8 project-name-wrapper lg:mb-16 xl:mb-20">
+        <div className="relative px-2 py-6 xl:py-8 project-name-wrapper lg:mb-20 xl:mb-20">
           <h4
             className={`text-2xl whitespace-nowrap font-black lg:absolute lg:top-10 xl:top-16  lg:text-6xl 2xl:text-7xl text-primary project-name
-          ${idx % 2 === 0 ? "xl:-left-20 md:-left-20" : "xl:left-36 md:left-24"}
+          ${idx % 2 === 0 ? "xl:-left-40 md:-left-40" : "xl:left-56 md:left-24"}
           `}
           >
             {project.name}.
@@ -130,7 +127,7 @@ const Project = ({ project, idx }) => {
       ${idx % 2 === 0 ? "items-start" : "xl:items-end"}
       `}
         >
-          <p className="text-base font-semibold xl:text-lg text-secondary project-description">
+          <p className="mt-0 text-base xl:text-lg text-secondary project-description lg:mt-4">
             {project.description}
           </p>
 
@@ -145,23 +142,18 @@ const Project = ({ project, idx }) => {
             ))}
           </div>
 
-          <div className="flex items-center space-x-4 project-links-wrapper">
-            <a
-              className="cursor-pointer text-primary project-link"
-              href={project.links.github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <AiFillGithub size={24} />
-            </a>
-            <a
-              className="cursor-pointer text-primary project-link"
-              href={project.links.demo}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <BiLinkExternal size={24} />
-            </a>
+          <div className="flex items-center space-x-6 project-links-wrapper">
+            {project.links.map((link) => (
+              <a
+                className={`text-${link.color} hover:text-${link.hoverColor} project-link`}
+                key={project.name + "-" + link.name}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {link.icon}
+              </a>
+            ))}
           </div>
         </div>
       </div>

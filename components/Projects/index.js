@@ -1,61 +1,75 @@
 import React from "react";
+import { AiFillGithub } from "react-icons/ai";
+import { BiLinkExternal } from "react-icons/bi";
+import { MdOutlineOndemandVideo } from "react-icons/md";
 
 import Project from "./Project";
 
 const projects = [
   {
-    name: "Mountain",
+    name: "Ecommerce App",
     imageUrl: "/images/projects/Ecommerce Mockup Output.png",
-    // imageUrl:
-    //   "https://images.unsplash.com/photo-1637319894739-66e54d82adc3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
     description: `
-          When she reached the first hills of the Italic Mountains, she had a
-          last view back on the skyline of her hometown Bookmarksgrove, the
-          headline of Alphabet Village and the subline of her own road, the Line
-          Lane. Pityful a rethoric question ran over her cheek, then she
-          continued her way`,
-    techStacks: ["Vue", "Tailwind", "Node", "Postgres"],
-    links: {
-      github: "https://github.com",
-      demo: "https://github.com",
-    },
+         A Server-Side Rendered fullstack ecommerce application including the admin side functionalities.
+         Features the ability to filter products based on their categories/subcategories, their filter basis (size, color, brand), stripe payment (test mode),
+         cart and wishlist functionality. Admin side functions include the ability to manage categories, products, filters.`,
+    techStacks: ["Nuxt", "Tailwind", "Node", "Postgres"],
+    links: [
+      {
+        name: "Project Demo",
+        color: "blue-200",
+        hoverColor: "blue-400",
+        href: "https://ssr-ecommerce-app.vercel.app/",
+        icon: <BiLinkExternal title="Project Demo" size={24} />,
+      },
+      {
+        name: "Demo Video",
+        color: "blue-200",
+        hoverColor: "blue-400",
+        href: "https://res.cloudinary.com/dnoibyqq2/video/upload/v1638285732/ecommerce-demo.mkv",
+        icon: <MdOutlineOndemandVideo title="Demo Video" size={24} />,
+      },
+      {
+        name: "Github",
+        color: "gray-200",
+        hoverColor: "gray-600",
+        href: "https://github.com/ManishKarki1997/SSR-Ecommerce-App",
+        icon: <AiFillGithub title="Project Repo" size={24} />,
+      },
+    ],
   },
   {
-    name: "Evening City",
-    imageUrl:
-      "https://images.unsplash.com/photo-1627444479551-ea349f763e96?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+    name: "TypeWars",
+    imageUrl: "/images/projects/Typewars Output.png",
     description: `
-    On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.`,
-    techStacks: ["Nuxt", "Tailwind", "Node", "Mongodb"],
+      A real-time multiplayer typing game with the ability to challenge players, play a rematch, some basic typing stats.
+      An old project I did to learn about Socket.io and realtime in general.
+    `,
+    techStacks: ["Vue", "Vuesax", "Tailwind", "Node", "Mongodb"],
 
-    links: {
-      github: "https://github.com",
-      demo: "https://github.com",
-    },
-  },
-  {
-    name: "Sea Road",
-    imageUrl:
-      "https://images.unsplash.com/photo-1636649314542-9ca27f901803?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
-    description: `
-    But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their projects again and again. And if she hasn’t been rewritten, then they are still using her.`,
-    techStacks: ["Nuxt", "Equal UI", "Node", "Postgres"],
-    links: {
-      github: "https://github.com",
-      demo: "https://github.com",
-    },
-  },
-  {
-    name: "Beautiful Hill",
-    imageUrl:
-      "https://images.unsplash.com/photo-1605241577524-5fd5e41fca65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
-    description: `
-    It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.`,
-    techStacks: ["Nuxt", "SCSS", "Node", "Firebase"],
-    links: {
-      github: "https://github.com",
-      demo: "https://github.com",
-    },
+    links: [
+      {
+        name: "Project Demo",
+        color: "blue-200",
+        hoverColor: "blue-600",
+        href: "https://typewars.netlify.app",
+        icon: <BiLinkExternal title="Project Demo" size={24} />,
+      },
+      {
+        name: "Demo Video",
+        color: "blue-200",
+        hoverColor: "blue-600",
+        href: "https://res.cloudinary.com/dnoibyqq2/image/upload/v1638284382/Typewars_Demo_Gif.gif",
+        icon: <MdOutlineOndemandVideo title="Demo Video" size={24} />,
+      },
+      {
+        name: "Github",
+        color: "gray-200",
+        hoverColor: "gray-600",
+        href: "https://github.com/ManishKarki1997/Type-Wars",
+        icon: <AiFillGithub title="Project Repo" size={24} />,
+      },
+    ],
   },
 ];
 

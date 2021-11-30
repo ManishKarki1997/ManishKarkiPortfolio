@@ -36,11 +36,11 @@ const projects = [
         icon: <AiFillGithub title="Project Repo" size={24} />,
       },
       {
-        name: "Android App",
+        name: "Windows App",
         color: "blue-500",
         hoverColor: "blue-600",
         href: "https://github.com/ManishKarki1997/Organize/releases/tag/v1.0.0",
-        icon: <AiFillAppstore title="Android App" size={24} />,
+        icon: <AiFillAppstore title="Windows App" size={24} />,
       },
     ],
   },

@@ -52,8 +52,8 @@ const GetInTouch = () => {
 
       <div className="flex items-center justify-center">
         <button className="flex items-center px-16 py-3 space-x-4 transition-colors duration-150 border-2 rounded-md text-accent hover:bg-accent hover:text-white border-primary mail-btn">
-          <MdOutlineWavingHand size={20} />
           <span>Say Hi</span>
+          <MdOutlineWavingHand size={20} />
         </button>
       </div>
     </div>

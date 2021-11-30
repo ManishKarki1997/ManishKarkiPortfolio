@@ -251,8 +251,8 @@ const Header = () => {
         <div className="container flex items-center justify-between">
           {/* eslint-disable-next-line @next/next/link-passhref */}
           <Link href="/">
-            <h1 className="font-bold text-primary brand-name ">
-              <span className="fixed text-5xl text-primary letter-m top-2">
+            <h1 className="mt-1 font-bold text-primary brand-name">
+              <span className="fixed text-5xl text-primary letter-m top-3">
                 M
               </span>
 
