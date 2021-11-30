@@ -127,7 +127,7 @@ const Project = ({ project, idx }) => {
       ${idx % 2 === 0 ? "items-start" : "xl:items-end"}
       `}
         >
-          <p className="mt-0 text-base xl:text-lg text-secondary project-description lg:mt-4">
+          <p className="mt-0 xl:leading-8 xl:text-lg text-secondary project-description lg:mt-4">
             {project.description}
           </p>
 

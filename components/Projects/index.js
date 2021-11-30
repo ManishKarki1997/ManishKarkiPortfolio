@@ -45,7 +45,7 @@ const projects = [
       A real-time multiplayer typing game with the ability to challenge players, play a rematch, some basic typing stats.
       An old project I did to learn about Socket.io and realtime in general.
     `,
-    techStacks: ["Vue", "Vuesax", "Tailwind", "Node", "Mongodb"],
+    techStacks: ["Vue", "Vuesax", "Node", "Mongodb"],
 
     links: [
       {

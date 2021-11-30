@@ -46,9 +46,9 @@ const SecondaryProject = ({ project, idx }) => {
         idx + 1
       }`}
     >
-      <div className="w-full overflow-hidden rounded h-72">
+      <div className="w-full overflow-hidden rounded h-72 group">
         <img
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-full transition-transform duration-200 transform group-hover:scale-110"
           src={project.featuredImage}
           alt=""
         />
