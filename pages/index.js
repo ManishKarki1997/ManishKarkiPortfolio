@@ -11,11 +11,14 @@ export default function Home() {
       <Head>
         <title>Manish Karki</title>
       </Head>
+
       <Hero />
       <Projects />
       <TechStacks />
       <SecondaryProjects />
       <GetInTouch />
+
+      <div className="fixed flex flex-col items-center justify-between w-16 h-32 bottom-10 left-16 fixed-links-wrapper"></div>
     </div>
   );
 }

@@ -36,7 +36,10 @@ const HamburgerMenu = ({ navExpanded, handleNavToggle }) => {
   };
 
   return (
-    <button onClick={onClickHamburgerIcon} className="text-primary">
+    <button
+      onClick={onClickHamburgerIcon}
+      className="text-primary hamburger-menu-icon"
+    >
       <span className="block w-5 h-1 mb-1 rounded bg-primaryOpposite line-top"></span>
       <span className="block w-5 h-1 rounded bg-primaryOpposite line-bottom "></span>
     </button>
