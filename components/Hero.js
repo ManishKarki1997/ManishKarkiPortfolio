@@ -3,7 +3,12 @@ import gsap from "gsap/dist/gsap";
 import { useInView } from "react-intersection-observer";
 
 import { MdOutlineWavingHand } from "react-icons/md";
-import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
+import {
+  AiFillGithub,
+  AiOutlineTwitter,
+  AiFillLinkedin,
+  AiOutlineFilePdf,
+} from "react-icons/ai";
 
 const Hero = () => {
   const { ref, inView } = useInView({
@@ -79,6 +84,14 @@ const Hero = () => {
       </p>
 
       <div className="flex items-center mt-6 space-x-6 hero-links-wrapper">
+        <a
+          className=" text-primary hover:text-gray-600 hero-link"
+          href="/resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <AiOutlineFilePdf size={24} />
+        </a>
         <a
           className=" text-primary hover:text-gray-600 hero-link"
           href="https://github.com/ManishKarki1997"
