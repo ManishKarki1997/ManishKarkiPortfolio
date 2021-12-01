@@ -96,7 +96,7 @@ const TechStack = ({ stack, idx }) => {
 
 const TechStacks = () => {
   return (
-    <div className="container bg-primary">
+    <div className="bodyContainer bg-primary">
       <div className="flex items-center h-auto overflow-hidden md:h-32 tech-stacks-wrapper">
         <div className="flex flex-wrap justify-between w-full tech-stack md:flex-nowrap md:w-auto">
           {stacks.map((stack, idx) => (

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import TechStacks from "../components/TechStacks";
 import SecondaryProjects from "../components/SecondaryProjects";
@@ -10,6 +11,7 @@ export default function Home() {
       <Head>
         <title>Manish Karki</title>
       </Head>
+      <Hero />
       <Projects />
       <TechStacks />
       <SecondaryProjects />

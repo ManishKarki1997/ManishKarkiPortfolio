@@ -75,7 +75,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="container w-full">
+    <div className="w-full mt-56 bodyContainer">
       {projects.map((project, idx) => (
         <Project key={project.name} idx={idx} project={project} />
       ))}

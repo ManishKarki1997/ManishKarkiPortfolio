@@ -157,7 +157,7 @@ const SecondaryProjects = () => {
   }, [inView]);
 
   return (
-    <div ref={ref} className="container w-full mt-48 bg-primary">
+    <div ref={ref} className="w-full mt-48 bodyContainer bg-primary">
       <div className="w-full text-center">
         <h3 className="section-header">Some more projects</h3>
       </div>

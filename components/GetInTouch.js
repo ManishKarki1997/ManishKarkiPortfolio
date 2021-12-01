@@ -42,7 +42,7 @@ const GetInTouch = () => {
   return (
     <div
       ref={ref}
-      className="container w-full mx-auto mt-56 text-center bg-primary md:w-7/12 get-in-touch"
+      className="w-full mx-auto mt-56 text-center bodyContainer bg-primary md:w-7/12 get-in-touch"
     >
       <h3 className="section-header">Get In Touch</h3>
       <p className="mt-4 mb-12 text-lg text-tertiary">
@@ -51,10 +51,13 @@ const GetInTouch = () => {
       </p>
 
       <div className="flex items-center justify-center">
-        <button className="flex items-center px-16 py-3 space-x-4 transition-colors duration-150 border-2 rounded-md text-accent hover:bg-accent hover:text-white border-primary mail-btn">
+        <a
+          href="mailto:manishkarki247@gmail.com"
+          className="flex items-center px-16 py-3 space-x-4 transition-colors duration-150 border-2 rounded-md text-accent hover:bg-accent hover:text-white border-primary mail-btn"
+        >
           <span>Say Hi</span>
           <MdOutlineWavingHand size={20} />
-        </button>
+        </a>
       </div>
     </div>
   );

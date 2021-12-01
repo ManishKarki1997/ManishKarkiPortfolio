@@ -245,7 +245,7 @@ const Header = () => {
                 M
               </span>
 
-              <span className="hidden mb-2 text-2xl lg:ml-11 md:ml-11 brand-letter md:inline-block">
+              {/* <span className="hidden mb-2 text-2xl lg:ml-11 md:ml-11 brand-letter md:inline-block">
                 a
               </span>
               <span className="hidden text-2xl brand-letter md:inline-block">
@@ -259,7 +259,7 @@ const Header = () => {
               </span>
               <span className="hidden text-2xl brand-letter md:inline-block ">
                 h
-              </span>
+              </span> */}
             </h1>
           </Link>
 

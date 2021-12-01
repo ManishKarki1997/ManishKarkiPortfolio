@@ -15,11 +15,17 @@ const Project = ({ project, idx }) => {
     });
 
     projectTimelineRef.current
-      .to(`.project-${idx + 1}`, {
-        autoAlpha: 1,
-        duration: 0.3,
-        ease: "sine.inOut",
-      })
+      .fromTo(
+        `.project-${idx + 1}`,
+        {
+          autoAlpha: 0,
+        },
+        {
+          autoAlpha: 1,
+          duration: 0.3,
+          ease: "sine.inOut",
+        }
+      )
 
       .to(`.project-${idx + 1} .overlay`, {
         width: 0,
@@ -84,7 +90,7 @@ const Project = ({ project, idx }) => {
   return (
     <div
       ref={ref}
-      className={`project opacity-0 w-full lg:w-full xl:w-10/12 xl:mb-64 mb-24 flex flex-col lg:flex-row project-${
+      className={`project  w-full lg:w-full  xl:mb-64 mb-24 flex flex-col lg:flex-row project-${
         idx + 1
       }
       ${idx % 2 === 0 ? "mr-auto" : "ml-auto"}
