@@ -193,9 +193,14 @@ const Header = () => {
             ))}
 
             <li className="mb-8 opacity-0 not-menu-link resume-li">
-              <button className="px-4 py-1 text-2xl font-black text-white uppercase lg:text-6xl bg-accent">
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="px-4 py-1 text-2xl font-black text-white uppercase lg:text-6xl bg-accent"
+              >
                 Resume
-              </button>
+              </a>
             </li>
           </ul>
 
