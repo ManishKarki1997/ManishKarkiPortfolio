@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import gsap from "gsap/dist/gsap";
 import { useInView } from "react-intersection-observer";
 
@@ -84,15 +85,16 @@ const Hero = () => {
       </p>
 
       <div className="flex items-center mt-6 space-x-6 hero-links-wrapper">
-        <a
-          className=" text-primary hover:text-gray-600 hero-link"
-          href="/files/Manish Karki Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-        >
-          <AiOutlineFilePdf size={24} />
-        </a>
+        <Link href="/files/Manish Karki Resume.pdf" passHref={true}>
+          <a
+            className=" text-primary hover:text-gray-600 hero-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+          >
+            <AiOutlineFilePdf size={24} />
+          </a>
+        </Link>
         <a
           className=" text-primary hover:text-gray-600 hero-link"
           href="https://github.com/ManishKarki1997"
