@@ -42,9 +42,7 @@ const SecondaryProject = ({ project, idx }) => {
   return (
     <div
       ref={ref}
-      className={`px-4 py-4 shadow-2xl bg-secondary group secondary-project-${
-        idx + 1
-      }`}
+      className={`px-4 py-4 bg-secondary group secondary-project-${idx + 1}`}
     >
       <div className="w-full overflow-hidden rounded h-72 group ">
         <img
