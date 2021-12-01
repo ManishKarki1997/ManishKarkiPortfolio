@@ -193,16 +193,15 @@ const Header = () => {
             ))}
 
             <li className="mb-8 opacity-0 not-menu-link resume-li">
-              <Link href="/files/Manish Karki Resume.pdf" passHref={true}>
-                <a
-                  target="_blank"
-                  download
-                  rel="noopener noreferrer"
-                  className="px-4 py-1 text-2xl font-black text-white uppercase lg:text-6xl bg-accent"
-                >
-                  Resume
-                </a>
-              </Link>
+              <a
+                href="https://www.dropbox.com/s/faekcb6qqr533qg/Resume.pdf?dl=1"
+                target="_blank"
+                download
+                rel="noopener noreferrer"
+                className="px-4 py-1 text-2xl font-black text-white uppercase lg:text-6xl bg-accent"
+              >
+                Resume
+              </a>
             </li>
           </ul>
 

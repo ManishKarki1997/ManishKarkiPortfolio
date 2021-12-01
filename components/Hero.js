@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import gsap from "gsap/dist/gsap";
 import { useInView } from "react-intersection-observer";
 
@@ -17,8 +16,6 @@ const Hero = () => {
   });
   const [shouldTriggerLinksAnim, setShouldTriggerLinksAnim] =
     React.useState(false);
-
-  const animPos = React.useRef(null);
 
   //   taken from https://codepen.io/GreenSock/pen/eYJLOdj
   // basically, used this to change the position of the profile links from current position to the fixed position(bottom left element)
@@ -85,16 +82,16 @@ const Hero = () => {
       </p>
 
       <div className="flex items-center mt-6 space-x-6 hero-links-wrapper">
-        <Link href="/files/Manish Karki Resume.pdf" passHref={true}>
-          <a
-            className=" text-primary hover:text-gray-600 hero-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            download
-          >
-            <AiOutlineFilePdf size={24} />
-          </a>
-        </Link>
+        <a
+          href="https://www.dropbox.com/s/faekcb6qqr533qg/Resume.pdf?dl=1"
+          className=" text-primary hover:text-gray-600 hero-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+        >
+          <AiOutlineFilePdf size={24} />
+        </a>
+
         <a
           className=" text-primary hover:text-gray-600 hero-link"
           href="https://github.com/ManishKarki1997"
