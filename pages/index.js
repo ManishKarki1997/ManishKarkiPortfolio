@@ -18,7 +18,7 @@ export default function Home() {
       <SecondaryProjects />
       <GetInTouch />
 
-      <div className="fixed flex flex-col items-center justify-between w-16 h-32 bottom-10 left-16 fixed-links-wrapper"></div>
+      <div className="fixed flex flex-col justify-between w-16 h-32 bottom-10 left-16 fixed-links-wrapper"></div>
     </div>
   );
 }

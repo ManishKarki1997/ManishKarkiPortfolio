@@ -1,14 +1,21 @@
 import React from "react";
 import gsap from "gsap/dist/gsap";
+import { useInView } from "react-intersection-observer";
 
 import { MdOutlineWavingHand } from "react-icons/md";
 import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
 
 const Hero = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.7,
+  });
   const [shouldTriggerLinksAnim, setShouldTriggerLinksAnim] =
     React.useState(false);
+
   const animPos = React.useRef(null);
 
+  //   taken from https://codepen.io/GreenSock/pen/eYJLOdj
+  // basically, used this to change the position of the profile links from current position to the fixed position(bottom left element)
   function flip(elements, changeFunc, vars) {
     elements = gsap.utils.toArray(elements);
     vars = vars || {};
@@ -34,16 +41,7 @@ const Hero = () => {
     return tl.from(elements, copy);
   }
 
-  React.useEffect(() => {
-    const letterMEl = document.querySelector(".letter-m");
-    if (!letterMEl) return;
-    const letterMElRect = letterMEl.getBoundingClientRect();
-    const left = letterMElRect.left;
-    const top = letterMElRect.top;
-    animPos.current = [top, left];
-  }, []);
-
-  const swapFn = () => {
+  const swapFn = React.useCallback(() => {
     if (shouldTriggerLinksAnim) {
       [...Array.from(document.querySelectorAll(".hero-link"))].map((el) => {
         document.querySelector(".fixed-links-wrapper").appendChild(el);
@@ -53,15 +51,18 @@ const Hero = () => {
         document.querySelector(".hero-links-wrapper").appendChild(el);
       });
     }
-  };
+  }, [shouldTriggerLinksAnim]);
 
-  const onClickStartAnim = () => {
-    setShouldTriggerLinksAnim(!shouldTriggerLinksAnim);
+  React.useEffect(() => {
+    setShouldTriggerLinksAnim(inView ? false : true);
     flip([...Array.from(document.querySelectorAll(".hero-link"))], swapFn);
-  };
+  }, [inView, swapFn]);
 
   return (
-    <div className="w-full py-32 mx-auto lg:max-w-2xl bodyContainer bg-primary">
+    <div
+      ref={ref}
+      className="w-full py-32 mx-auto lg:max-w-2xl bodyContainer bg-primary"
+    >
       <div className="flex items-center">
         <p>Hi,</p>
         <div className="ml-1 mr-2 text-accent">
@@ -69,10 +70,7 @@ const Hero = () => {
         </div>
         <p>I&apos;m</p>
       </div>
-      <h2
-        onClick={() => onClickStartAnim()}
-        className="px-0 mt-2 -ml-1 text-2xl font-black md:text-8xl text-primary"
-      >
+      <h2 className="px-0 mt-2 -ml-1 text-2xl font-black md:text-8xl text-primary">
         Manish Karki
       </h2>
 
