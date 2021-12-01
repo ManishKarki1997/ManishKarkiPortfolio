@@ -194,9 +194,9 @@ const Header = () => {
 
             <li className="mb-8 opacity-0 not-menu-link resume-li">
               <a
-                href="/resume.pdf"
+                href="files/Manish Karki Resume.pdf"
                 target="_blank"
-                rel="noreferrer"
+                download
                 className="px-4 py-1 text-2xl font-black text-white uppercase lg:text-6xl bg-accent"
               >
                 Resume

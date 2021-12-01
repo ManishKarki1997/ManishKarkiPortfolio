@@ -86,9 +86,9 @@ const Hero = () => {
       <div className="flex items-center mt-6 space-x-6 hero-links-wrapper">
         <a
           className=" text-primary hover:text-gray-600 hero-link"
-          href="/resume.pdf"
+          href="files/Manish Karki Resume.pdf"
           target="_blank"
-          rel="noreferrer"
+          download
         >
           <AiOutlineFilePdf size={24} />
         </a>
