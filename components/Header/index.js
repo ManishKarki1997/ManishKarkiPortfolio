@@ -194,7 +194,7 @@ const Header = () => {
 
             <li className="mb-8 opacity-0 not-menu-link resume-li">
               <a
-                href="https://www.dropbox.com/s/faekcb6qqr533qg/Resume.pdf?dl=1"
+                href="https://www.dropbox.com/s/fgit5rd5flq0i3o/Manish%20Karki%20Resume.pdf?dl=1"
                 target="_blank"
                 download
                 rel="noopener noreferrer"

@@ -10,7 +10,10 @@ import {
   AiOutlineFilePdf,
 } from "react-icons/ai";
 
+import useWindowSize from "../hooks/useWindowSize";
+
 const Hero = () => {
+  const [width] = useWindowSize();
   const { ref, inView } = useInView({
     threshold: 0.7,
   });
@@ -57,9 +60,12 @@ const Hero = () => {
   }, [shouldTriggerLinksAnim]);
 
   React.useEffect(() => {
+    // don't animate for screen sizes < 768
+    if (width < 768) return;
+
     setShouldTriggerLinksAnim(inView ? false : true);
     flip([...Array.from(document.querySelectorAll(".hero-link"))], swapFn);
-  }, [inView, swapFn]);
+  }, [inView, swapFn, width]);
 
   return (
     <div
@@ -73,17 +79,17 @@ const Hero = () => {
         </div>
         <p>I&apos;m</p>
       </div>
-      <h2 className="px-0 mt-2 -ml-1 text-2xl font-black md:text-8xl text-primary">
+      <h2 className="px-0 mt-2 ml-0 text-3xl font-black lg:-ml-1 md:text-8xl text-primary">
         Manish Karki
       </h2>
 
-      <p className="text-lg">
+      <p className="mt-1 text-lg">
         An aspiring fullstack web developer eager for new opportunities
       </p>
 
       <div className="flex items-center mt-6 space-x-6 hero-links-wrapper">
         <a
-          href="https://www.dropbox.com/s/faekcb6qqr533qg/Resume.pdf?dl=1"
+          href="https://www.dropbox.com/s/fgit5rd5flq0i3o/Manish%20Karki%20Resume.pdf?dl=1"
           className=" text-primary hover:text-gray-600 hero-link"
           target="_blank"
           rel="noopener noreferrer"
