@@ -65,16 +65,16 @@ const Header = () => {
       ease: "power4.easeInOut",
     });
 
-    if (!isLettersAnimated) {
-      navTimelineRef.current.to(".brand-letter", {
-        ease: "power4.easeInOut",
-        autoAlpha: 0,
-        duration: 0.05,
-        stagger: {
-          amount: 0.1,
-        },
-      });
-    }
+    // if (!isLettersAnimated) {
+    //   navTimelineRef.current.to(".brand-letter", {
+    //     ease: "power4.easeInOut",
+    //     autoAlpha: 0,
+    //     duration: 0.05,
+    //     stagger: {
+    //       amount: 0.1,
+    //     },
+    //   });
+    // }
 
     navTimelineRef.current.to(".navigation", {
       transformOrigin: "center right",
