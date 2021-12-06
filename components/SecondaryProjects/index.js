@@ -19,7 +19,7 @@ const projects = [
     featuredImage: "/images/projects/Organize App Mockup.png",
     description: `A Vue 3 & Electron application that organizes your files in a directory according to your set-up settings by looking at the file extensions
             `,
-    techStacks: ["Vue 3", "Electron", "Native UI"],
+    techStacks: ["Vue 3", "Electron", "Naive UI"],
     links: [
       {
         name: "Demo Video",
