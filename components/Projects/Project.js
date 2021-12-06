@@ -148,10 +148,10 @@ const Project = ({ project, idx }) => {
             ))}
           </div>
 
-          <div className="flex items-center space-x-6 project-links-wrapper">
+          <div className="flex items-center space-x-6 text-primary project-links-wrapper">
             {project.links.map((link) => (
               <a
-                className={`text-${link.color} hover:text-${link.hoverColor} project-link`}
+                className={`project-link text-primary hover:text-${link.hoverColor}`}
                 key={project.name + "-" + link.name}
                 href={link.href}
                 target="_blank"
