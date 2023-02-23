@@ -15,6 +15,9 @@ module.exports = {
         secondary: "var(--color-text-secondary)",
         tertiary: "var(--color-text-tertiary)",
         accent: "var(--color-text-accent)",
+        rprimary: "var(--resume-text-primary)",
+        rsecondary: "var(--resume-text-secondary)",
+        rtertiary: "var(--resume-text-tertiary)",
       },
       borderColor: {
         primary: "var(--color-border-primary)",

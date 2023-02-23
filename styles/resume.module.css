@@ -1,0 +1,63 @@
+/* resume page */
+.resumePage {
+  font-family: "FiraGO", "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif !important;
+}
+
+.resumePage .text-rprimary {
+  color: var(--resume-text-primary) !important;
+}
+.resumePage .text-rsecondary {
+  color: var(--resume-text-secondary) !important;
+}
+
+.resumePage p {
+  font-family: FiraGO, "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif !important;
+  margin-bottom: 1rem;
+  color: var(--resume-text-primary);
+  line-height: 1.6;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.resumePage p.text-rtertiary {
+  color: var(--resume-text-tertiary) !important;
+}
+
+.resumePage :is(h1, h2, h3, h4, h5) {
+  font-family: FiraGO, "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif !important;
+  line-height: 1.32;
+}
+
+.resumePage h1 {
+  margin-top: 0;
+  font-size: 1.802rem;
+}
+
+.resumePage h2 {
+  font-size: 1.602rem;
+}
+
+.resumePage h3 {
+  font-size: 1.424rem;
+  line-height: 1.32;
+}
+
+.resumePage h4 {
+  font-size: 1.266rem;
+}
+
+.resumePage h5 {
+  font-size: 1.125rem;
+}
+
+.resumePage small,
+.resumePage .text_small {
+  font-size: 0.889rem;
+  /* font-size: 17px; */
+}

@@ -26,6 +26,11 @@
   --color-scrollbar-track: #040407;
   --color-scrollbar-handle: #808080;
   --color-scrollbar-handle-hover: #969595;
+
+  /* resume page colors */
+  --resume-text-primary: #4a556c;
+  --resume-text-secondary: #8e9cb4;
+  --resume-text-tertiary: #68778d;
 }
 
 .light {
@@ -48,4 +53,9 @@
   --color-scrollbar-track: #ffffff;
   --color-scrollbar-handle: #757575;
   --color-scrollbar-handle-hover: #858383;
+
+  /* resume page colors */
+  --resume-text-primary: #4a556c;
+  --resume-text-secondary: #8e9cb4;
+  --resume-text-tertiary: #68778d;
 }

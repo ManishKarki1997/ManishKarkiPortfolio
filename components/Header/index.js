@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import gsap from "gsap/dist/gsap";
+
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
+import { BiSun, BiMoon } from "react-icons/bi";
 
 import HamburgerMenu from "./HamburgerMenu";
 import useDarkMode from "../../hooks/useDarkMode";
@@ -34,8 +36,9 @@ const Header = () => {
   const [navExpanded, setNavExpanded] = React.useState(false);
   const [hoveredMenuItem, setHoveredMenuItem] = React.useState(null);
   const navTimelineRef = React.useRef(null);
-  const [isDarkMode, setIsDarkMode] = useDarkMode();
   const [width] = useWindowSize();
+  const [isDarkMode, setIsDarkMode] = useDarkMode()
+  console.log(isDarkMode)
 
   // so that i don't have to animate the letters when mega menu is toggled
   // otherwise, even if scroll way bottom and then clicked mega menu, these letters show up (due to gsap)
@@ -220,6 +223,18 @@ const Header = () => {
               </h4>
 
               <div className="flex items-center justify-end mt-2 space-x-6 translate-x-3 social-icons">
+                <button
+                  onClick={() => setIsDarkMode(!isDarkMode)}
+                  className=" text-primary hover:text-gray-600 mr-1"
+                >
+                  {
+                    isDarkMode ?
+                      <BiSun size={24} />
+                      :
+                      <BiMoon size={24} />
+
+                  }
+                </button>
                 <a
                   className="opacity-0 text-primary hover:text-gray-600"
                   href="https://github.com/ManishKarki1997"
