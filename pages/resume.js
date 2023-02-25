@@ -93,21 +93,21 @@ const Resume = () => {
                         <p className='text-rtertiary unstyled'>|</p> */}
 
                         <a href="https://karkimanish.com" target="_blank" className="flex items-center gap-2 text-lg" rel="noreferrer">
-                            <ExternalLinkIcon className='text-rsecondary' />
+                            <ExternalLinkIcon className='text-rsecondary' size={17} />
                             <p className="text-rsecondary font-normal unstyled">karkimanish.com</p>
                         </a>
 
                         <p className='text-rtertiary unstyled'>|</p>
 
                         <a href="https://github.com/ManishKarki1997" target="_blank" className="flex items-center gap-2 text-lg" rel="noreferrer">
-                            <GithubIcon className='text-rsecondary' />
+                            <GithubIcon className='text-rsecondary' size={17} />
                             <p className="text-rsecondary font-normal unstyled" style={{ fontSize: "17px" }}>ManishKarki1997</p>
                         </a>
 
                         <p className='text-rtertiary unstyled'>|</p>
 
                         <a href="https://www.linkedin.com/in/manish-karki-179a181b5/" target="_blank" className="flex items-center gap-2 text-lg" rel="noreferrer">
-                            <LinkedIn className='text-rsecondary' />
+                            <LinkedIn className='text-rsecondary' size={18} />
                             <p className="text-rsecondary font-normal unstyled" style={{ fontSize: "17px" }}>LinkedIn</p>
                         </a>
 
@@ -144,7 +144,7 @@ const Resume = () => {
                             </div>
                             <div className="content">
                                 <p className='font-semibold'>&gt; Built a video/audio and chat communication system for a ticket/support management app</p>
-                                <p className='font-semibold'>&gt; Built a case management system for Australia-based healthcare provider  </p>
+                                <p className='font-semibold'>&gt; Built a case management system for an Australian-based healthcare provider  </p>
                                 <p className='font-semibold'>&gt; Wrote a webscrapper that scraped news from google/duckduckgo based on different criterion </p>
                                 <p className='font-semibold'>&gt; Developed a webapp to live-track user&apos;s position from their mobile devices and render in an interactive map </p>
                             </div>
@@ -217,56 +217,12 @@ const Resume = () => {
                                     <p className="text-rsecondary font-normal">United English Boarding School</p>
                                 </div>
                             </div>
+
+                            <div className="h-24"></div>
+                            <div className="h-12"></div>
                         </div>
                     </section>
 
-
-
-                    {/* skills */}
-                    <section className="section mt-8 first:mt-0">
-                        {/* <h5 className='text-rsecondary mb-5 font-bold  break-inside-avoid'>Skills</h5> */}
-                        <div className="mb-8 break-inside-avoid">
-                            <div className="mb-6">
-                                <h5 className="text-link font-bold mb-4">Languages</h5>
-                                <div className="flex items-center gap-2 flex-wrap">
-                                    {
-                                        LANGUAGES.map(language => (
-                                            <div key={language.name} className="px-2 py-1 rounded bg-gray-200 flex items-center justify-center text-sm">
-                                                <p className="text-white font-bold mb-0 unstyled">{language.name}</p>
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-                            </div>
-
-                            <div className="mb-6">
-                                <h5 className="text-link font-bold mb-4">Libraries/Frameworks</h5>
-                                <div className="flex items-center gap-2 flex-wrap">
-                                    {
-                                        LIBRARIES.map(library => (
-                                            <div key={library.name} className="px-2 py-1 rounded bg-gray-200 flex items-center justify-center text-sm">
-                                                <p className="text-white font-bold mb-0 unstyled">{library.name}</p>
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-                            </div>
-
-                            <div className="mb-6">
-                                <h5 className="text-link font-bold mb-4">Tools and Platforms</h5>
-                                <div className="flex items-center gap-2 flex-wrap">
-                                    {
-                                        TOOLS_AND_PLATFORMS.map(tool => (
-                                            <div key={tool.name} className="px-2 py-1 rounded bg-gray-200 flex items-center justify-center text-sm">
-                                                <p className="text-white font-bold mb-0 unstyled">{tool.name}</p>
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-                            </div>
-
-                        </div>
-                    </section>
 
 
                     {/* projects */}
@@ -358,6 +314,56 @@ const Resume = () => {
                             </div>
                         </div>
                     </section>
+
+
+                    {/* skills */}
+                    <section className="section mt-8 first:mt-0">
+                        {/* <h5 className='text-rsecondary mb-5 font-bold  break-inside-avoid'>Skills</h5> */}
+                        <div className="mb-8 break-inside-avoid">
+                            <div className="mb-6">
+                                <h5 className="text-link font-bold mb-4">Languages</h5>
+                                <div className="flex items-center gap-2 flex-wrap">
+                                    {
+                                        LANGUAGES.map(language => (
+                                            <div key={language.name} className="px-2 py-1 rounded bg-gray-200 flex items-center justify-center text-sm">
+                                                <p className="text-white font-bold mb-0 unstyled">{language.name}</p>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div>
+
+                            <div className="mb-6">
+                                <h5 className="text-link font-bold mb-4">Libraries/Frameworks</h5>
+                                <div className="flex items-center gap-2 flex-wrap">
+                                    {
+                                        LIBRARIES.map(library => (
+                                            <div key={library.name} className="px-2 py-1 rounded bg-gray-200 flex items-center justify-center text-sm">
+                                                <p className="text-white font-bold mb-0 unstyled">{library.name}</p>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div>
+
+                            <div className="mb-6">
+                                <h5 className="text-link font-bold mb-4">Tools and Platforms</h5>
+                                <div className="flex items-center gap-2 flex-wrap">
+                                    {
+                                        TOOLS_AND_PLATFORMS.map(tool => (
+                                            <div key={tool.name} className="px-2 py-1 rounded bg-gray-200 flex items-center justify-center text-sm">
+                                                <p className="text-white font-bold mb-0 unstyled">{tool.name}</p>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+
 
                     {/* contact */}
                     {/* <section className="section mt-8 first:mt-0">
