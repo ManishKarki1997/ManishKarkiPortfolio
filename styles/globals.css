@@ -162,3 +162,8 @@ p {
     transform: translateX(-100%);
   }
 }
+
+p.unstyled {
+  font-size: inherit !important;
+  margin-bottom: 0 !important;
+}

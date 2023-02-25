@@ -2,6 +2,84 @@ import React from 'react'
 
 import resumeStyles from '../styles/resume.module.css'
 
+import { HiOutlineExternalLink as ExternalLinkIcon } from 'react-icons/hi'
+import { AiFillGithub as GithubIcon, AiFillLinkedin as LinkedIn } from 'react-icons/ai'
+import { BsPhone as PhoneIcon } from 'react-icons/bs'
+
+const LANGUAGES = [
+    {
+        name: "HTML"
+    },
+    {
+        name: "CSS"
+    },
+    {
+        name: "SCSS"
+    },
+    {
+        name: "Javascript"
+    },
+    {
+        name: "Typescript"
+    },
+]
+
+
+
+const LIBRARIES = [
+    {
+        name: "Vue"
+    },
+    {
+        name: "Nuxt"
+    },
+    {
+        name: "React"
+    },
+    {
+        name: "Next"
+    },
+    {
+        name: "GSAP"
+    },
+    {
+        name: "Node"
+    },
+    {
+        name: "Express"
+    },
+    {
+        name: "Socket"
+    },
+    {
+        name: "Prisma"
+    },
+    {
+        name: "MongoDB"
+    },
+    {
+        name: "and more..."
+    },
+]
+
+const TOOLS_AND_PLATFORMS = [
+    {
+        name: "Git"
+    },
+    {
+        name: "Netlify"
+    },
+    {
+        name: "Heroku"
+    },
+    {
+        name: "Vercel"
+    },
+    {
+        name: "Cloudinary"
+    },
+]
+
 const Resume = () => {
     return (
         // <div className={`${resumeStyles.resumePage} p-6 mx-auto page max-w-2xl print:max-w-a4 md:max-w-a4 md:h-a4 xsm:p-8 sm:p-9 md:p-16 bg-white`}>
@@ -9,7 +87,12 @@ const Resume = () => {
 
             <div className="mb-14">
                 <h1 className='font-bold mb-2'>Manish Karki</h1>
-                <p className="font-normal">Fullstack Web Developer | karkimanish.com</p>
+                <div className="flex items-center gap-2 text-lg">
+                    <p className="font-normal unstyled">Fullstack Web Developer | </p>
+                    <a href="https://karkimanish.com" target="_blank" className="flex items-center gap-2 text-lg" rel="noreferrer">
+                        <p className="text-rsecondary font-normal unstyled">karkimanish.com</p>
+                    </a>
+                </div>
                 {/* <span className='text-lg text-rsecondary'>I specialize in building fullstack web applications and occasional mobile app development.</span> */}
             </div>
 
@@ -77,6 +160,61 @@ const Resume = () => {
                                 </div>
                             </div>
 
+                        </section>
+
+                        <section className="section">
+                            <h5 className='text-rsecondary mb-5 font-bold'>Education</h5>
+                            <div className="mb-8">
+                                <div className="mb-1">
+                                    <h5 className="text-rprimary font-bold mb-1">Computer Science and Information Technology (CSIT)</h5>
+                                    <div className="flex items-center gap-2">
+                                        <p className="text-rsecondary font-normal">&apos;16 - &apos;21</p>
+                                        <p className="text-rsecondary font-normal">Bachelor&apos; degree in CSIT</p>
+                                    </div>
+                                </div>
+                                <div className="mb-1">
+                                    <h5 className="text-rprimary font-bold mb-1">A-Level</h5>
+                                    <div className="flex items-center gap-2">
+                                        <p className="text-rsecondary font-normal">&apos;13 - &apos;15</p>
+                                        <p className="text-rsecondary font-normal">A-Levels from Chelsea International Academy</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section className="section">
+                            <h5 className='text-rsecondary mb-5 font-bold'>Contact</h5>
+                            <div className="mb-8">
+
+                                <div className="flex items-center gap-2">
+                                    <a href="https://karkimanish.com" target="_blank" className="flex items-center gap-2 mb-1 text-lg" rel="noreferrer">
+                                        <p className="text-rsecondary font-normal unstyled" style={{ fontSize: "17px" }}>karkimanish.com</p>
+                                    </a>
+                                    |
+                                    <a href="https://manishkarki.vercel.app" target="_blank" className="flex items-center gap-2 mb-1 text-lg" rel="noreferrer">
+                                        <p className="text-rsecondary font-normal unstyled" style={{ fontSize: "17px" }}>manishkarki.vercel.app</p>
+                                    </a>
+                                    <ExternalLinkIcon className='text-rsecondary' />
+                                </div>
+
+
+                                <a href="https://github.com/ManishKarki1997" target="_blank" className="flex items-center gap-2 mb-1 text-lg" rel="noreferrer">
+                                    <p className="text-rsecondary font-normal unstyled" style={{ fontSize: "17px" }}>github.com/ManishKarki1997</p>
+                                    <GithubIcon className='text-rsecondary' />
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/manish-karki-179a181b5/" target="_blank" className="flex items-center gap-2 mb-1 text-lg" rel="noreferrer">
+                                    <p className="text-rsecondary font-normal unstyled" style={{ fontSize: "17px" }}>linkedin.com/in/manish-karki-179a181b5/</p>
+                                    <LinkedIn className='text-rsecondary' />
+                                </a>
+
+                                <div className="flex items-center gap-2 mb-1 text-lg cursor-pointer">
+                                    <p className="text-rsecondary font-normal unstyled" style={{ fontSize: "17px" }}>+977-9845701354</p>
+                                    <PhoneIcon className='text-rsecondary' />
+                                </div>
+
+
+                            </div>
                         </section>
                     </div>
 
@@ -170,6 +308,52 @@ const Resume = () => {
                                         </p>
                                     </div>
                                 </div>
+                            </div>
+                        </section>
+
+                        {/* skills */}
+                        <section className="section">
+                            <h5 className='text-rsecondary mb-5 font-bold'>Skills</h5>
+                            <div className="mb-8">
+                                <div className="mb-6">
+                                    <h5 className="text-rprimary font-bold mb-1">Languages</h5>
+                                    <div className="flex items-center gap-2 flex-wrap">
+                                        {
+                                            LANGUAGES.map(language => (
+                                                <div key={language.name} className="px-2 py-1 rounded bg-gray-200 flex items-center justify-center text-sm">
+                                                    <p className="text-white font-bold mb-0 unstyled">{language.name}</p>
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+
+                                <div className="mb-6">
+                                    <h5 className="text-rprimary font-bold mb-1">Libraries/Frameworks</h5>
+                                    <div className="flex items-center gap-2 flex-wrap">
+                                        {
+                                            LIBRARIES.map(library => (
+                                                <div key={library.name} className="px-2 py-1 rounded bg-gray-200 flex items-center justify-center text-sm">
+                                                    <p className="text-white font-bold mb-0 unstyled">{library.name}</p>
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+
+                                <div className="mb-6">
+                                    <h5 className="text-rprimary font-bold mb-1">Tools and Platforms</h5>
+                                    <div className="flex items-center gap-2 flex-wrap">
+                                        {
+                                            TOOLS_AND_PLATFORMS.map(tool => (
+                                                <div key={tool.name} className="px-2 py-1 rounded bg-gray-200 flex items-center justify-center text-sm">
+                                                    <p className="text-white font-bold mb-0 unstyled">{tool.name}</p>
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+
                             </div>
                         </section>
                     </div>
