@@ -26,9 +26,9 @@ const Hero = () => {
     elements = gsap.utils.toArray(elements);
     vars = vars || {};
     let tl = gsap.timeline({
-        onComplete: vars.onComplete,
-        delay: vars.delay || 0,
-      }),
+      onComplete: vars.onComplete,
+      delay: vars.delay || 0,
+    }),
       bounds = elements.map((el) => el.getBoundingClientRect()),
       copy = {},
       p;
@@ -89,7 +89,8 @@ const Hero = () => {
 
       <div className="flex items-center mt-6 space-x-6 hero-links-wrapper">
         <a
-          href="https://www.dropbox.com/s/fgit5rd5flq0i3o/Manish%20Karki%20Resume.pdf?dl=1"
+          // href="https://www.dropbox.com/s/fgit5rd5flq0i3o/Manish%20Karki%20Resume.pdf?dl=1"
+          href="https://www.dropbox.com/s/3xxkqcbs6hslahv/Manish%20Karki%202.pdf?dl=1"
           className=" text-primary hover:text-gray-600 hero-link"
           target="_blank"
           rel="noopener noreferrer"
