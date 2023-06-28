@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import fs from 'fs'
-import html_to_pdf from 'html-pdf-node'
+import fs from 'fs';
+import html_to_pdf from 'html-pdf-node';
 import puppeteer from 'puppeteer';
 
 const saveAsPdf = async (url) => {
@@ -12,7 +12,7 @@ const saveAsPdf = async (url) => {
   });
 
   const result = await page.pdf({
-    format: 'a4',
+    format: 'a3',
   });
   await browser.close();
 

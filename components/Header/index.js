@@ -37,8 +37,8 @@ const Header = () => {
   const [hoveredMenuItem, setHoveredMenuItem] = React.useState(null);
   const navTimelineRef = React.useRef(null);
   const [width] = useWindowSize();
-  const [isDarkMode, setIsDarkMode] = useDarkMode()
-  console.log(isDarkMode)
+  const [isDarkMode, setIsDarkMode] = useDarkMode();
+  console.log(isDarkMode);
 
   // so that i don't have to animate the letters when mega menu is toggled
   // otherwise, even if scroll way bottom and then clicked mega menu, these letters show up (due to gsap)
@@ -197,7 +197,7 @@ const Header = () => {
 
             <li className="mb-8 opacity-0 not-menu-link resume-li">
               <a
-                href="https://www.dropbox.com/s/fgit5rd5flq0i3o/Manish%20Karki%20Resume.pdf?dl=1"
+                href="https://www.dropbox.com/s/faekcb6qqr533qg/Resume.pdf?dl=1"
                 target="_blank"
                 download
                 rel="noopener noreferrer"

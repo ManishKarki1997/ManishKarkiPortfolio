@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-import resumeStyles from '../styles/resume.module.css'
+import resumeStyles from '../styles/resume.module.css';
 
-import { HiOutlineExternalLink as ExternalLinkIcon } from 'react-icons/hi'
-import { AiFillGithub as GithubIcon, AiFillLinkedin as LinkedIn } from 'react-icons/ai'
-import { BsPhone as PhoneIcon } from 'react-icons/bs'
+import { HiOutlineExternalLink as ExternalLinkIcon } from 'react-icons/hi';
+import { AiFillGithub as GithubIcon, AiFillLinkedin as LinkedIn } from 'react-icons/ai';
+import { BsPhone as PhoneIcon } from 'react-icons/bs';
 
 const LANGUAGES = [
     {
@@ -22,7 +22,7 @@ const LANGUAGES = [
     {
         name: "Typescript"
     },
-]
+];
 
 
 
@@ -60,7 +60,7 @@ const LIBRARIES = [
     {
         name: "and more..."
     },
-]
+];
 
 const TOOLS_AND_PLATFORMS = [
     {
@@ -78,12 +78,12 @@ const TOOLS_AND_PLATFORMS = [
     {
         name: "Cloudinary"
     },
-]
+];
 
 const Resume = () => {
     return (
         <>
-            <div className={`${resumeStyles.resumePage} p-6 mx-auto page max-w-2xl print:max-w-a4 md:max-w-a4 md:h-a4 xsm:p-8 sm:p-9 md:p-16 bg-white`}>
+            <div className={`${resumeStyles.resumePage} p-6 mx-auto page max-w-2xl print:max-w-a4 md:max-w-a4 md:h-a4 xsm:p-8 sm:p-9 md:px-16 md:py-6 bg-white`}>
 
                 <div className="mb-14">
                     <h1 className='font-bold mb-2'>Manish Karki</h1>
@@ -232,7 +232,9 @@ const Resume = () => {
                         {/* project 1 */}
                         <div className="mb-8 break-inside-avoid">
                             <div className="mb-1">
-                                <h5 className="text-rprimary font-bold mb-1">E-commerce Application</h5>
+                                <a href="https://ssr-ecommerce-app.vercel.app">
+                                    <h5 className="text-rprimary font-bold mb-1">E-commerce Application</h5>
+                                </a>
                                 <div className="flex items-center gap-2">
                                     {/* <p className="text-rsecondary font-normal">&apos;22 - Present</p> */}
                                     <div className="flex items-center gap-2">
@@ -255,7 +257,9 @@ const Resume = () => {
                         {/* project 2 */}
                         <div className="mb-8 break-inside-avoid">
                             <div className="mb-1">
-                                <h5 className="text-rprimary font-bold mb-1">Typewars</h5>
+                                <a href="https://typewars.netlify.app/">
+                                    <h5 className="text-rprimary font-bold mb-1">Typewars</h5>
+                                </a>
                                 <div className="flex items-center gap-2">
                                     {/* <p className="text-rsecondary font-normal">&apos;22 - Present</p> */}
                                     <div className="flex items-center gap-2">
@@ -277,7 +281,9 @@ const Resume = () => {
                         {/* project 3 */}
                         <div className="mb-8 break-inside-avoid">
                             <div className="mb-1">
-                                <h5 className="text-rprimary font-bold mb-1">Genshin Impact Guide App</h5>
+                                <a href="https://github.com/ManishKarki1997/GenshinImpactApp">
+                                    <h5 className="text-rprimary font-bold mb-1">Genshin Impact Guide App</h5>
+                                </a>
                                 <div className="flex items-center gap-2">
                                     {/* <p className="text-rsecondary font-normal">&apos;22 - Present</p> */}
                                     <div className="flex items-center gap-2">
@@ -298,7 +304,9 @@ const Resume = () => {
                         {/* project 4 */}
                         <div className="mb-8 break-inside-avoid">
                             <div className="mb-1">
-                                <h5 className="text-rprimary font-bold mb-1">Organize App</h5>
+                                <a href="https://github.com/ManishKarki1997/Organize">
+                                    <h5 className="text-rprimary font-bold mb-1">Organize App</h5>
+                                </a>
                                 <div className="flex items-center gap-2">
                                     <div className="flex items-center gap-2">
                                         <p className='text-rtertiary'>Vue3.</p>
@@ -405,7 +413,7 @@ const Resume = () => {
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Resume
+export default Resume;
