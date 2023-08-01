@@ -89,8 +89,8 @@ const Hero = () => {
 
       <div className="flex items-center mt-6 space-x-6 hero-links-wrapper">
         <a
-          // href="https://www.dropbox.com/s/fgit5rd5flq0i3o/Manish%20Karki%20Resume.pdf?dl=1"
-          href="https://www.dropbox.com/s/faekcb6qqr533qg/Resume.pdf?dl=1"
+          href="https://www.dropbox.com/s/fgit5rd5flq0i3o/Manish%20Karki%20Resume.pdf?dl=1"
+          // href="https://www.dropbox.com/s/faekcb6qqr533qg/Resume.pdf?dl=1"
           className=" text-primary hover:text-gray-600 hero-link"
           target="_blank"
           rel="noopener noreferrer"
