@@ -69,6 +69,7 @@ const Hero = () => {
 
   return (
     <div
+    id="hero"
       ref={ref}
       className="w-full py-32 mx-auto lg:max-w-2xl bodyContainer bg-primary"
     >
@@ -84,12 +85,12 @@ const Hero = () => {
       </h2>
 
       <p className="mt-1 text-lg">
-        An aspiring fullstack web developer eager for new opportunities
+        Fullstack web developer with a focus on building reliable, scalable, and user-friendly applications
       </p>
 
       <div className="flex items-center mt-6 space-x-6 hero-links-wrapper">
         <a
-          href="https://www.dropbox.com/s/fgit5rd5flq0i3o/Manish%20Karki%20Resume.pdf?dl=1"
+          href="https://www.dropbox.com/scl/fi/ka5srx2ngejzx6ft2ys9c/Resume-2025.pdf?rlkey=oksk7a3nrt2gf4c0utxr5brsb&st=ed6gdf7h&dl=1"
           // href="https://www.dropbox.com/s/faekcb6qqr533qg/Resume.pdf?dl=1"
           className=" text-primary hover:text-gray-600 hero-link"
           target="_blank"
@@ -115,14 +116,14 @@ const Hero = () => {
         >
           <AiFillLinkedin size={24} />
         </a>
-        <a
+        {/* <a
           className=" text-primary hover:text-blue-500 hero-link"
           href="https://twitter.com/manishkarki247"
           target="_blank"
           rel="noreferrer"
         >
           <AiOutlineTwitter size={24} />
-        </a>
+        </a> */}
       </div>
     </div>
   );

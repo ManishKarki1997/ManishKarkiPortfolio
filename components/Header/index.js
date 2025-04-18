@@ -14,21 +14,24 @@ const menuLinks = [
     name: "Home",
     href: "/",
     content: `No place like home`,
+    targetElementId:"hero",
   },
   {
     name: "Projects",
     href: "/projects",
     content: `See some of the stuffs I made`,
+    targetElementId:"projects",
   },
+  // {
+  //   name: "Blog",
+  //   href: "/blog",
+  //   content: `Just writing some things that I find interesting. Maybe something I learnt or some tutorials on how to do stuff`,
+  // },
   {
-    name: "Blog",
-    href: "/blog",
-    content: `Just writing some things that I find interesting. Maybe something I learnt or some tutorials on how to do stuff`,
-  },
-  {
-    name: "About Me",
+    name: "Contact Me",
     href: "/about-me",
-    content: `Let's know something about me and what I do`,
+    content: `Let's connect`,
+    targetElementId:"get-in-touch",
   },
 ];
 
@@ -38,7 +41,7 @@ const Header = () => {
   const navTimelineRef = React.useRef(null);
   const [width] = useWindowSize();
   const [isDarkMode, setIsDarkMode] = useDarkMode();
-  console.log(isDarkMode);
+  
 
   // so that i don't have to animate the letters when mega menu is toggled
   // otherwise, even if scroll way bottom and then clicked mega menu, these letters show up (due to gsap)
@@ -48,13 +51,23 @@ const Header = () => {
     setNavExpanded(!navExpanded);
     document.querySelector(".navigation")?.classList.add("z-50");
     if (!navExpanded) {
-      navTimelineRef.current.timeScale(1).play();
+      navTimelineRef.current.timeScale(1.5).play();
     } else {
-      navTimelineRef.current.timeScale(1.6).reverse();
+      navTimelineRef.current.timeScale(2.6).reverse();
     }
   };
 
   const circleHoverRef = React.useRef(null);
+
+
+  const onClickLink = (link) =>{
+    handleNavToggle()
+    setTimeout(() => {      
+      document.getElementById(link.targetElementId).scrollIntoView({
+        behavior: "smooth"
+      });
+    }, 500);
+  }
 
   React.useEffect(() => {
     navTimelineRef.current = gsap.timeline({
@@ -174,11 +187,11 @@ const Header = () => {
           <ul className="flex flex-col justify-center w-full lg:w-1/2 menu-links lg:justify-start">
             {menuLinks.map((menuItem) => (
               <li
+              onClick={() => onClickLink(menuItem)}
                 key={menuItem.href}
                 className="mb-8 text-2xl font-black uppercase opacity-0 menu-link lg:text-6xl"
-              >
-                <Link passHref href={menuItem.href}>
-                  <a
+              >                
+                  <div
                     onFocus={() => setHoveredMenuItem(menuItem)}
                     onMouseEnter={() => setHoveredMenuItem(menuItem)}
                     onMouseLeave={() => setHoveredMenuItem(null)}
@@ -190,14 +203,14 @@ const Header = () => {
                     >
                       {menuItem.name}
                     </span>
-                  </a>
-                </Link>
+                  </div>
+                
               </li>
             ))}
 
             <li className="mb-8 opacity-0 not-menu-link resume-li">
               <a
-                href="https://www.dropbox.com/s/faekcb6qqr533qg/Resume.pdf?dl=1"
+                href="https://www.dropbox.com/scl/fi/ka5srx2ngejzx6ft2ys9c/Resume-2025.pdf?rlkey=oksk7a3nrt2gf4c0utxr5brsb&st=ed6gdf7h&dl=1"
                 target="_blank"
                 download
                 rel="noopener noreferrer"
@@ -243,14 +256,14 @@ const Header = () => {
                 >
                   <AiFillGithub size={24} />
                 </a>
-                <a
+                {/* <a
                   className="opacity-0 text-primary hover:text-blue-600"
                   href="https://twitter.com/manishkarki247"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <AiOutlineTwitter size={24} />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

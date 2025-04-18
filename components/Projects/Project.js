@@ -90,7 +90,7 @@ const Project = ({ project, idx }) => {
   return (
     <div
       ref={ref}
-      className={`project  w-full lg:w-full  xl:mb-64 mb-24 flex flex-col lg:flex-row project-${
+      className={`project  w-full lg:w-full  xl:mb-32 mb-24 flex flex-col lg:flex-row project-${
         idx + 1
       }
       ${idx % 2 === 0 ? "mr-auto" : "ml-auto"}
@@ -111,33 +111,33 @@ const Project = ({ project, idx }) => {
         <Image
           src={project.imageUrl}
           alt="Project Image"
-          objectFit="cover"
+          objectFit="contain"
           width="1000"
           height="1000"
         />
       </div>
 
-      <div className="w-full project-content-wrapper xl:w-5/12">
+      <div className="w-full project-content-wrapper xl:w-5/12 z-10">
         <div className="relative px-2 py-6 xl:py-8 project-name-wrapper lg:mb-20 xl:mb-20">
           <h4
             className={`text-2xl whitespace-nowrap font-black lg:absolute lg:top-10 xl:top-16  lg:text-6xl 2xl:text-7xl text-primary project-name
-          ${idx % 2 === 0 ? "xl:-left-40 md:-left-40" : "xl:left-56 md:left-24"}
-          `}
+              `}
+              // ${idx % 2 === 0 ? "xl:-left-40 md:-left-40" : "xl:left-56 md:left-24"}
           >
             {project.name}.
           </h4>
         </div>
 
         <div
-          className={`w-full px-2 py-4 lg:px-8 lg:max-w-6xl 2xl:max-w-7xl   xl:px-12  flex flex-col 
-      ${idx % 2 === 0 ? "items-start" : "xl:items-end"}
-      `}
+          className={`w-full px-2 py-4 lg:px-4 lg:max-w-6xl 2xl:max-w-7xl   xl:px-4  flex flex-col items-start
+            `}
+            // ${idx % 2 === 0 ? "items-start" : "xl:items-end"}
         >
           <p className="mt-0 xl:leading-8 xl:text-lg text-secondary project-description lg:mt-4">
             {project.description}
           </p>
 
-          <div className="flex flex-wrap items-center my-6 space-x-4 project-stack-wrapper">
+          <div className="flex flex-wrap items-start my-6 gap-4 project-stack-wrapper">
             {project.techStacks.map((stack) => (
               <p
                 className="text-base font-medium text-accent stack"

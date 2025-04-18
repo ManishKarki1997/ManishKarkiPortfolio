@@ -41,6 +41,7 @@ const GetInTouch = () => {
 
   return (
     <div
+    id="get-in-touch"
       ref={ref}
       className="w-full mx-auto mt-56 text-center bodyContainer bg-primary md:w-7/12 get-in-touch"
     >

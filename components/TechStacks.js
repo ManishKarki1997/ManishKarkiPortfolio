@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FaReact } from "react-icons/fa";
+import { FaAws, FaDocker, FaReact } from "react-icons/fa";
 import {
   SiNodedotjs,
   SiNuxtdotjs,
@@ -12,6 +12,8 @@ import {
   SiSass,
   SiExpress,
   SiGithub,
+  SiPostgresql,
+  SiOpenai,
 } from "react-icons/si";
 
 import gsap from "gsap/dist/gsap";
@@ -66,20 +68,35 @@ const stacks = [
     icon: <SiNextdotjs title="Next JS" size={56} />,
   },
   {
-    name: "SASS",
-    hoverColor: "red-400",
-    icon: <SiSass title="SASS" size={56} />,
-  },
-  {
     name: "Github",
     hoverColor: "gray-600",
     icon: <SiGithub title="Github" size={56} />,
+  },
+  {
+    name: "AWS",
+    hoverColor: "red-600",
+    icon: <FaAws title="AWS" size={56} />, 
+  },
+  {
+    name: "Docker",
+    hoverColor: "blue-600",
+    icon: <FaDocker title="Docker" size={56} />, 
+  },
+  {
+    name: "Postgres",
+    hoverColor: "teal-600",
+    icon: <SiPostgresql title="Postgres" size={56} />, 
+  },
+  {
+    name: "OpenAI",
+    hoverColor: "gray-600",
+    icon: <SiOpenai title="OpenAI" size={56} />, 
   },
 ];
 
 const TechStack = ({ stack, idx }) => {
   return (
-    <a
+    <div
       className={`${
         idx % 2 ? "md:mt-6" : "md:-mt-6"
       } tech-stack-item mt-0 w-32 md:mx-16  my-24 md:my-0 mx-0 h-auto flex items-center justify-center hover:text-${
@@ -90,7 +107,7 @@ const TechStack = ({ stack, idx }) => {
       title={stack.name}
     >
       {stack.icon}
-    </a>
+    </div>
   );
 };
 

@@ -1,25 +1,14 @@
-import React from "react";
-
-import usePrefersDarkMode from "./usePrefersDarkMode";
-import useLocalStorage from "./useLocalStorage";
-
-const localStorageThemeKey = "manish-karki-is-dark-theme";
+import { useContext } from "react";
+import { ThemeContext } from "../providers/theme-provider";
 
 const useDarkMode = () => {
-  const prefersDarkMode = usePrefersDarkMode();
+  const context = useContext(ThemeContext);
 
-  const [value, setValue] = useLocalStorage(localStorageThemeKey, true);
+  if (context === undefined) {
+    throw new Error("useDarkMode must be used within a ThemeProvider");
+  }
 
-  const darkMode = value === undefined ? prefersDarkMode : value;
-
-  React.useEffect(() => {
-    const root = document.body;
-
-    root.classList.remove(darkMode ? "light" : "dark");
-    root.classList.add(darkMode ? "dark" : "light");
-  }, [value, darkMode]);
-
-  return [value, setValue];
+  return [context.isDarkMode, context.setIsDarkMode];
 };
 
-export default useDarkMode;
+export default useDarkMode

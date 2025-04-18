@@ -41,7 +41,7 @@ h6 {
 }
 
 .bodyContainer {
-  @apply px-6 mx-auto max-w-screen-xl md:px-32;
+  @apply px-6 mx-auto max-w-screen-xl md:px-20;
 }
 
 .section-header {
